@@ -13,7 +13,7 @@
 		55FBE1E51AB489FE00655C61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E41AB489FE00655C61 /* Images.xcassets */; };
 		55FBE1E81AB489FE00655C61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */; };
 		55FBE1F41AB489FE00655C61 /* IntenseCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1F31AB489FE00655C61 /* IntenseCareTests.swift */; };
-		55FBE1FF1AB48AB300655C61 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1FE1AB48AB300655C61 /* SwiftyJSON.swift */; };
+		55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		55FBE1ED1AB489FE00655C61 /* IntenseCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntenseCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1F21AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FBE1F31AB489FE00655C61 /* IntenseCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntenseCareTests.swift; sourceTree = "<group>"; };
-		55FBE1FE1AB48AB300655C61 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../Desktop/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		55FBE1DA1AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXGroup;
 			children = (
-				55FBE1FD1AB48A6F00655C61 /* External Module */,
+				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
 				55FBE1DF1AB489FE00655C61 /* ViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
@@ -115,13 +115,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		55FBE1FD1AB48A6F00655C61 /* External Module */ = {
+		55FBE2031AB48FFE00655C61 /* External Module */ = {
 			isa = PBXGroup;
 			children = (
-				55FBE1FE1AB48AB300655C61 /* SwiftyJSON.swift */,
+				55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */,
 			);
 			name = "External Module";
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55FBE1FF1AB48AB300655C61 /* SwiftyJSON.swift in Sources */,
+				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
 				55FBE1E01AB489FE00655C61 /* ViewController.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
 			);
