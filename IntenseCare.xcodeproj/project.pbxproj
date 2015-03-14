@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5512D10D1AB4C85E00F2FF4B /* Ubuntu-C.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1041AB4C85E00F2FF4B /* Ubuntu-C.ttf */; };
+		5512D10E1AB4C85E00F2FF4B /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1051AB4C85E00F2FF4B /* Ubuntu-RI.ttf */; };
+		5512D10F1AB4C85E00F2FF4B /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1061AB4C85E00F2FF4B /* Ubuntu-L.ttf */; };
+		5512D1101AB4C85E00F2FF4B /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1071AB4C85E00F2FF4B /* Ubuntu-BI.ttf */; };
+		5512D1111AB4C85E00F2FF4B /* Ubuntu-LI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1081AB4C85E00F2FF4B /* Ubuntu-LI.ttf */; };
+		5512D1121AB4C85E00F2FF4B /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D1091AB4C85E00F2FF4B /* Ubuntu-R.ttf */; };
+		5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */; };
+		5512D1141AB4C85E00F2FF4B /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */; };
+		5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */; };
 		55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */; };
 		55FBE1E01AB489FE00655C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* ViewController.swift */; };
 		55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E11AB489FE00655C61 /* Main.storyboard */; };
@@ -27,6 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5512D1041AB4C85E00F2FF4B /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
+		5512D1051AB4C85E00F2FF4B /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
+		5512D1061AB4C85E00F2FF4B /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
+		5512D1071AB4C85E00F2FF4B /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
+		5512D1081AB4C85E00F2FF4B /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
+		5512D1091AB4C85E00F2FF4B /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
+		5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
+		5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5512D1031AB4C84500F2FF4B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5512D1041AB4C85E00F2FF4B /* Ubuntu-C.ttf */,
+				5512D1051AB4C85E00F2FF4B /* Ubuntu-RI.ttf */,
+				5512D1061AB4C85E00F2FF4B /* Ubuntu-L.ttf */,
+				5512D1071AB4C85E00F2FF4B /* Ubuntu-BI.ttf */,
+				5512D1081AB4C85E00F2FF4B /* Ubuntu-LI.ttf */,
+				5512D1091AB4C85E00F2FF4B /* Ubuntu-R.ttf */,
+				5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */,
+				5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */,
+				5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		55FBE1CF1AB489FE00655C61 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +113,7 @@
 		55FBE1DA1AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXGroup;
 			children = (
+				5512D1031AB4C84500F2FF4B /* Resource */,
 				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
 				55FBE1DF1AB489FE00655C61 /* ViewController.swift */,
@@ -203,9 +238,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5512D10F1AB4C85E00F2FF4B /* Ubuntu-L.ttf in Resources */,
+				5512D1101AB4C85E00F2FF4B /* Ubuntu-BI.ttf in Resources */,
 				55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */,
+				5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */,
+				5512D10E1AB4C85E00F2FF4B /* Ubuntu-RI.ttf in Resources */,
 				55FBE1E81AB489FE00655C61 /* LaunchScreen.xib in Resources */,
 				55FBE1E51AB489FE00655C61 /* Images.xcassets in Resources */,
+				5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */,
+				5512D1121AB4C85E00F2FF4B /* Ubuntu-R.ttf in Resources */,
+				5512D1111AB4C85E00F2FF4B /* Ubuntu-LI.ttf in Resources */,
+				5512D10D1AB4C85E00F2FF4B /* Ubuntu-C.ttf in Resources */,
+				5512D1141AB4C85E00F2FF4B /* Ubuntu-M.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +397,7 @@
 				INFOPLIST_FILE = IntenseCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -363,6 +408,7 @@
 				INFOPLIST_FILE = IntenseCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -419,6 +465,7 @@
 				55FBE1F91AB489FE00655C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55FBE1FA1AB489FE00655C61 /* Build configuration list for PBXNativeTarget "IntenseCareTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +474,7 @@
 				55FBE1FC1AB489FE00655C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
