@@ -61,7 +61,6 @@
 		55FBE1CF1AB489FE00655C61 = {
 			isa = PBXGroup;
 			children = (
-				55FBE1FD1AB48A6F00655C61 /* External Module */,
 				55FBE1DA1AB489FE00655C61 /* IntenseCare */,
 				55FBE1F01AB489FE00655C61 /* IntenseCareTests */,
 				55FBE1D91AB489FE00655C61 /* Products */,
@@ -80,6 +79,7 @@
 		55FBE1DA1AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXGroup;
 			children = (
+				55FBE1FD1AB48A6F00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
 				55FBE1DF1AB489FE00655C61 /* ViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
@@ -121,6 +121,7 @@
 				55FBE1FE1AB48AB300655C61 /* SwiftyJSON.swift */,
 			);
 			name = "External Module";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
