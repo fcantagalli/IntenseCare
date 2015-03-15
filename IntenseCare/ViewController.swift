@@ -10,10 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tfName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        var myWhite = UIColor(white: 1, alpha: 0.2)
+        
+        tfName.attributedPlaceholder = NSAttributedString(string:"    Name",
+            attributes:[NSForegroundColorAttributeName: myWhite])
     }
 
     override func didReceiveMemoryWarning() {
