@@ -24,6 +24,7 @@
 		55FBE1F41AB489FE00655C61 /* IntenseCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1F31AB489FE00655C61 /* IntenseCareTests.swift */; };
 		55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */; };
 		7BA4D11B1ABF132900CB1693 /* BihStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */; };
+		7BA4D11F1ABF15E800CB1693 /* CellPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		55FBE1F31AB489FE00655C61 /* IntenseCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntenseCareTests.swift; sourceTree = "<group>"; };
 		55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BihStoryboard.storyboard; sourceTree = "<group>"; };
+		7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPatientTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
 				55FBE1DF1AB489FE00655C61 /* ViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
+				7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */,
 				7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */,
 				55FBE1E41AB489FE00655C61 /* Images.xcassets */,
 				55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
+				7BA4D11F1ABF15E800CB1693 /* CellPatientTableViewCell.swift in Sources */,
 				55FBE1E01AB489FE00655C61 /* ViewController.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
 			);
