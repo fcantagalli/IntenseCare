@@ -18,7 +18,7 @@
 		5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */; };
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
 		55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */; };
-		55FBE1E01AB489FE00655C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* ViewController.swift */; };
+		55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */; };
 		55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E11AB489FE00655C61 /* Main.storyboard */; };
 		55FBE1E51AB489FE00655C61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E41AB489FE00655C61 /* Images.xcassets */; };
 		55FBE1E81AB489FE00655C61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */; };
@@ -51,7 +51,7 @@
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55FBE1DF1AB489FE00655C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		55FBE1E21AB489FE00655C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55FBE1E41AB489FE00655C61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		55FBE1E71AB489FE00655C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				5512D1031AB4C84500F2FF4B /* Resource */,
 				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
-				55FBE1DF1AB489FE00655C61 /* ViewController.swift */,
+				55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */,
 				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
 				55FBE1E41AB489FE00655C61 /* Images.xcassets */,
@@ -274,7 +274,7 @@
 			files = (
 				55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */,
 				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
-				55FBE1E01AB489FE00655C61 /* ViewController.swift in Sources */,
+				55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +405,7 @@
 				INFOPLIST_FILE = IntenseCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -416,6 +417,7 @@
 				INFOPLIST_FILE = IntenseCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
