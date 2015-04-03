@@ -30,7 +30,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8aB-fT-9xV"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.27616099071207428" green="0.25098039215686274" blue="0.39355005159958717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.396078431372549" green="0.45490196078431372" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
@@ -243,31 +243,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter PIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-VF-ia6">
-                                <rect key="frame" x="10" y="62" width="300" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aex-X9-UuR" userLabel="errorView">
-                                <rect key="frame" x="0.0" y="20" width="320" height="20"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong PIN number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-Dx-uNs">
-                                        <rect key="frame" x="6" y="0.0" width="309" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.12889330169999999" blue="0.31505166330000001" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-rc-wAX" userLabel="CirclesView">
-                                <rect key="frame" x="16" y="104" width="288" height="52"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rid-Wz-EYd" userLabel="NumPad">
                                 <rect key="frame" x="0.0" y="164" width="320" height="309"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myD-WF-SyP" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myD-WF-SyP" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="211" y="5" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="3">
@@ -277,7 +256,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="SmU-Mk-3Fg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO9-8P-HzK" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO9-8P-HzK" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="126" y="5" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="2">
@@ -287,7 +266,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="uOD-mh-MJw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-Os-9cU" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-Os-9cU" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="41" y="5" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="1">
@@ -297,7 +276,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="Pd2-NU-vFf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKt-ud-3uI" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKt-ud-3uI" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="126" y="83" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="5">
@@ -307,7 +286,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="eF9-bf-ghb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzT-kI-H2H" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzT-kI-H2H" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="41" y="83" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="4">
@@ -317,7 +296,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="7Ha-4M-WUB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBd-54-LbJ" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBd-54-LbJ" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="211" y="161" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="9">
@@ -327,7 +306,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="wy9-zQ-Rhz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-gi-8Is" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-gi-8Is" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="126" y="161" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="8">
@@ -337,17 +316,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="vNO-cw-34W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni8-qN-4gE" customClass="PPCircleButton">
-                                        <rect key="frame" x="126" y="239" width="70" height="70"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="0">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="nTn-ji-yTb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obX-Jc-gG6" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obX-Jc-gG6" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="41" y="161" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="7">
@@ -357,7 +326,7 @@
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="U7f-VE-Ude"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-I0-gHt" customClass="PPCircleButton">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-I0-gHt" customClass="PPCircleButton" customModule="IntenseCare">
                                         <rect key="frame" x="211" y="83" width="70" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="6">
@@ -365,6 +334,16 @@
                                         </state>
                                         <connections>
                                             <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="wpc-0v-Afc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni8-qN-4gE" customClass="PPCircleButton" customModule="IntenseCare">
+                                        <rect key="frame" x="126" y="239" width="70" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonClick:" destination="3SF-1H-bAL" eventType="touchUpInside" id="nTn-ji-yTb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -380,13 +359,40 @@
                                     <action selector="resetPin:" destination="3SF-1H-bAL" eventType="touchUpInside" id="FDC-or-yww"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter PIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-VF-ia6">
+                                <rect key="frame" x="10" y="75" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mns-P4-9FD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.39607843139999999" green="0.4549019608" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Log In" id="PvV-ZR-JmU"/>
+                                </items>
+                            </navigationBar>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aex-X9-UuR" userLabel="errorView">
+                                <rect key="frame" x="0.0" y="44" width="320" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong PIN number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-Dx-uNs">
+                                        <rect key="frame" x="6" y="0.0" width="309" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.12889330169999999" blue="0.31505166330000001" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-rc-wAX" userLabel="CirclesView">
+                                <rect key="frame" x="16" y="104" width="288" height="52"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.35371517029999999" green="0.2274509804" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="errorLabel" destination="k6M-Dx-uNs" id="yix-sn-dKx"/>
-                        <outlet property="errorView" destination="k6M-Dx-uNs" id="gde-Mq-3DS"/>
+                        <outlet property="errorView" destination="aex-X9-UuR" id="nTV-An-pyC"/>
                         <outlet property="pinCircleView" destination="DuB-rc-wAX" id="FBd-xV-hUQ"/>
                         <outlet property="pinLabel" destination="AJ6-VF-ia6" id="pCJ-jp-4Is"/>
                         <outlet property="resetButton" destination="uBh-d6-vaz" id="TG1-s2-e9Q"/>

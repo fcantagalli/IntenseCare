@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     //Outlets to the elements
     @IBOutlet weak var pinCircleView: UIView!
-    @IBOutlet weak var errorView: UILabel!
+    @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var pinLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
@@ -100,6 +100,7 @@ class LoginViewController: UIViewController {
                 })
             }
             else if pinLength() == inputPin.length {
+                self.errorView.hidden = false
                 direction = 1
                 shake = 0
                 shakeCircle(pinCircleView)
@@ -150,8 +151,8 @@ class LoginViewController: UIViewController {
             setNeedsStatusBarAppearanceUpdate()
         }
     }
-    
-    /*override func prefersStatusBarHidden() -> Bool {
+    /*
+    override func prefersStatusBarHidden() -> Bool {
         return errorView.hidden
     }*/
     /*
@@ -260,7 +261,7 @@ class PPCircleButton: UIButton {
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         self.layer.cornerRadius = CGRectGetHeight(rect)/2.0
-        var color = UIColor(white: 1,alpha:0.5)
+        var color = UIColor(white: 1,alpha:0.75)
         self.layer.borderColor = color.CGColor
         self.layer.borderWidth = 0.2
     }
