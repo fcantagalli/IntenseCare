@@ -119,6 +119,7 @@ class LoginViewController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addCircle() // add circles that will fill according the user types
@@ -162,7 +163,11 @@ class LoginViewController: UIViewController {
     
     // functions of fields
     func checkPin(pin:String) -> Bool {
-        if pin == "1234" {
+        var shaPin = sha256(pin.dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        var passwordStored = NSUserDefaults.standardUserDefaults().objectForKey("password1") as NSString
+        
+        if shaPin == passwordStored {
             return true
         }
         else {
