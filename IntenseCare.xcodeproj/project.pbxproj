@@ -16,6 +16,7 @@
 		5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */; };
 		5512D1141AB4C85E00F2FF4B /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */; };
 		5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */; };
+		559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D266B1ACF06C1000F70CF /* ViewController.swift */; };
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
 		55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */; };
 		55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */; };
@@ -49,6 +50,7 @@
 		5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
 		558C8BE91ABBAC53004D1ACE /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "IntenseCare/Bridging-Header.h"; sourceTree = "<group>"; };
+		559D266B1ACF06C1000F70CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				5512D1031AB4C84500F2FF4B /* Resource */,
 				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
+				559D266B1ACF06C1000F70CF /* ViewController.swift */,
 				55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */,
 				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
@@ -279,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */,
 				55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */,
 				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
 				55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */,
+				7BA4D11F1ABF15E800CB1693 /* CellPatientTableViewCell.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
