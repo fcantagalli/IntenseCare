@@ -26,6 +26,50 @@ class InsertHospital:UIViewController, UITextFieldDelegate {
     // ACTION BUTTON TO SAVE
     @IBAction func saveButton(sender: AnyObject) {
         //CODE TO SAVE HERE
+        var postParam:String!
+        
+        if nameTF.text == "" {
+            println("name can´t be empty")
+            nameTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital name",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if address1TF.text == "" {
+            println("address1 can´t be empty")
+            address1TF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital address1",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if address2TF.text == "" {
+            println("address2 can´t be empty")
+            address2TF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital address2",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if numberTF.text == ""{
+            println("number can´t be empty")
+            numberTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital number",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if cityTF.text == "" {
+            println("city can´t be empty")
+            cityTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert the City where it is located",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if stateTF.text == "" {
+            println("state can´t be empty")
+            stateTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert the State where it is located",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        
+        if zipTF.text == "" {
+            println("zip can´t be empty")
+            zipTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital zip code",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        if phoneTF.text == "" {
+            println("phone can´t be empty")
+            phoneTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital phone number",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        
     }
 
     
