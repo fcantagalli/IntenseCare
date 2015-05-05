@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K8j-aw-8zw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K8j-aw-8zw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,7 +27,7 @@
                             <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlq-81-7EL">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.31372549019607843" green="0.34901960784313724" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.066666666666666666" green="0.6588235294117647" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -35,9 +35,16 @@
                                     <navigationItem title="Patients" id="tNI-X6-kAv"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-Ts-OaX">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qr-Zt-Qxr">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="FYn-Qc-2cl"/>
+                                    <tabBarItem systemItem="more" id="yUU-kQ-oCQ"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="8" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-Ts-OaX">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatCell" rowHeight="60" id="D56-q4-fiN" customClass="CellPatientTableViewCell" customModule="IntenseCare">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -55,7 +62,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AgeCake2" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-gE-eTt">
                                                     <rect key="frame" x="106" y="22" width="22" height="16"/>
@@ -80,10 +86,6 @@
                                                         </label>
                                                     </subviews>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rq3-Aw-haV">
-                                                    <rect key="frame" x="228" y="18" width="47" height="21"/>
-                                                    <color key="backgroundColor" red="0.90196078431372551" green="0.29803921568627451" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-uH-oEO">
                                                     <rect key="frame" x="283" y="15" width="29" height="30"/>
                                                     <state key="normal" backgroundImage="left-arrow">
@@ -100,7 +102,6 @@
                                             <outlet property="patientAge" destination="MqW-st-Hd6" id="W9G-nC-qRc"/>
                                             <outlet property="patientBed" destination="Sej-7O-e0P" id="VfX-QE-qul"/>
                                             <outlet property="patientName" destination="vCU-dE-JzR" id="mIY-S4-ukh"/>
-                                            <outlet property="patientStatus" destination="rq3-Aw-haV" id="ru7-ld-RTu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -109,16 +110,8 @@
                                     <outlet property="delegate" destination="K8j-aw-8zw" id="A3q-zF-m13"/>
                                 </connections>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qr-Zt-Qxr">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="FYn-Qc-2cl"/>
-                                    <tabBarItem systemItem="more" id="yUU-kQ-oCQ"/>
-                                </items>
-                            </tabBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dlq-81-7EL" firstAttribute="top" secondItem="L8W-ko-llH" secondAttribute="bottom" id="7wM-CF-C4y"/>
                             <constraint firstItem="UgJ-Ts-OaX" firstAttribute="top" secondItem="dlq-81-7EL" secondAttribute="bottom" id="BsQ-Ph-O0v"/>

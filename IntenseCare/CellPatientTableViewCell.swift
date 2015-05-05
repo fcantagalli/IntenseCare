@@ -10,24 +10,26 @@ import UIKit
 
 class CellPatientTableViewCell: UITableViewCell {
 
+    // attributes
     var viewController:UIViewController? = nil
+    var patientId = 0
     
+    // outlets
     @IBOutlet weak var patientName: UILabel!
     @IBOutlet weak var patientAge: UILabel!
     @IBOutlet weak var patientBed: UILabel!
-    @IBOutlet weak var patientStatus: UIImageView!
     
     @IBAction func ExtraButton(sender: AnyObject) {
         
-        let alert = UIAlertController(title: "Choose an option", message: "Some Message" , preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let alert = UIAlertController(title: nil, message: nil , preferredStyle: UIAlertControllerStyle.ActionSheet)
         
-        let consultation = UIAlertAction(title: "Make consultation", style: UIAlertActionStyle.Default) { (alert) -> Void in
+        let consultation = UIAlertAction(title: "Do consultation", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("consultation")
         }
-        let history = UIAlertAction(title: "History", style: UIAlertActionStyle.Default) { (alert) -> Void in
+        let history = UIAlertAction(title: "Change bed", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("history")
         }
-        let blabla = UIAlertAction(title: "Bla Bla", style: UIAlertActionStyle.Default) { (alert) -> Void in
+        let blabla = UIAlertAction(title: "Change status", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("Bla Bla")
         }
         let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (alert) -> Void in
@@ -54,7 +56,7 @@ class CellPatientTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setViewController(VC:UIViewController){
+    func setCellViewController(VC:UIViewController){
         self.viewController = VC
     }
 

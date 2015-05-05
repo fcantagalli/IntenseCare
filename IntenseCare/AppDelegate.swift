@@ -17,18 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        var storyboard:UIStoryboard = self.window!.rootViewController!.storyboard!
+       /* var storyboard:UIStoryboard = self.window!.rootViewController!.storyboard!
         
-        if (NSUserDefaults.standardUserDefaults().objectForKey("password1") != nil) {
+        if (NSUserDefaults.standardUserDefaults().objectForKey("password1") != nil) { // if the is no preference saved, call Sign up screen
             var viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
             self.window?.rootViewController = viewController;
             self.window?.makeKeyAndVisible()
         }
-        else{
+        else{ // otherwise call pin screen
             var viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("SignUpViewController") as UIViewController
             self.window?.rootViewController = viewController;
             self.window?.makeKeyAndVisible()
-        }
+        }*/
         
         return true
     }

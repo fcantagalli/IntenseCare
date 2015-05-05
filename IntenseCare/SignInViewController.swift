@@ -10,6 +10,7 @@ import UIKit
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfemail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -18,13 +19,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     // HERE INSIDE GOES THE CODE TO DO SOMETHING WITH THE BUTTON
     @IBAction func buttonSave(sender: UIButton) {
         // revify password
-        if countElements(tfPassword.text) < 4 {
+        if count(tfPassword.text) < 4 {
             let alert = UIAlertController(title: "Password too short", message: "Enter a 4 PIN password on the first password field" , preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             return;
         }
-        if countElements(tfPassword2.text) < 4 {
+        if count(tfPassword2.text) < 4 {
             let alert = UIAlertController(title: "Password too short", message: "Enter a 4 PIN password on the second password field" , preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -73,6 +74,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         tfPassword.delegate = self
         tfPassword2.delegate = self
         
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,18 +92,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {// return NO to not change text
-        var fieldSize = countElements(textField.text)
+        var fieldSize = count(textField.text)
         if range.length + range.location > fieldSize
         {
             return false;
         }
         
-        var newLength = fieldSize + countElements(string) - range.length;
+        var newLength = fieldSize + count(string) - range.length;
         return (newLength > 4) ? false : true;
         
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     

@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var pinLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     //Constants
     let kVTPinPadViewControllerCircleRadius:CGFloat = 6.0
@@ -58,7 +59,7 @@ class LoginViewController: UIViewController {
         if self.isSettingPinCode {
             if self.pinLength() == inputPin.length {
                 if self.newPinState == settingNewPinState.settingNewPinStateFirst {
-                    self.firstPassCode = inputPin
+                    self.firstPassCode = inputPin as String
                     //reset and prepare for confirmation stage
                     resetPin(sender)
                     self.newPinState = settingNewPinState.settingNewPinStateConfirm
@@ -85,7 +86,7 @@ class LoginViewController: UIViewController {
             }
         }
         else {
-            if pinLength() == inputPin.length && checkPin(inputPin) == true {
+            if pinLength() == inputPin.length && checkPin(inputPin as String) == true {
                 var delayInSeconds:Double = 0.3
                 var nsec = Double(NSEC_PER_SEC) * delayInSeconds
                 var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(nsec))
@@ -125,6 +126,12 @@ class LoginViewController: UIViewController {
         addCircle() // add circles that will fill according the user types
         
         // add code here
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -165,7 +172,7 @@ class LoginViewController: UIViewController {
     func checkPin(pin:String) -> Bool {
         var shaPin = sha256(pin.dataUsingEncoding(NSUTF8StringEncoding)!)
         
-        var passwordStored = NSUserDefaults.standardUserDefaults().objectForKey("password1") as NSString
+        var passwordStored = NSUserDefaults.standardUserDefaults().objectForKey("password1") as! NSString
         
         if shaPin == passwordStored {
             return true
@@ -197,7 +204,7 @@ class LoginViewController: UIViewController {
         if symbolIndex >= circleViewList.count {
             return
         }
-        var circleView:PPPinCircleView = circleViewList.objectAtIndex(symbolIndex) as PPPinCircleView
+        var circleView:PPPinCircleView = circleViewList.objectAtIndex(symbolIndex) as! PPPinCircleView
         circleView.backgroundColor = UIColor.whiteColor()
     }
     // shake the circles

@@ -7,14 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+    let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
+    let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
+    let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
+    let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
     
-let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
-let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
-let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
-let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
-
-
-func getWebContent(method:String, postVariables:String) -> JSON {
+func getWebContent(method:String, postVariables:String?) -> JSON {
     
     //URL request
     var url = NSURL(string:method)
@@ -25,10 +25,12 @@ func getWebContent(method:String, postVariables:String) -> JSON {
     request.HTTPMethod = "POST"
     println("passou 2")
     // setting POST parameters
-    var dataString = postVariables
-    let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-    request.HTTPBody = requestBodyData
-    println("passou 3")
+    if postVariables != nil{
+        var dataString = postVariables!
+        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = requestBodyData
+    }
+        println("passou 3")
     
     var json:JSON?
     let group = dispatch_group_create()
@@ -39,16 +41,15 @@ func getWebContent(method:String, postVariables:String) -> JSON {
             //println(NSString(data: data, encoding: NSUTF8StringEncoding))
             //println("passou 6")
             var jsonaux:JSON = JSON(data: data)
-            
             println(jsonaux)
             
             json =  jsonaux;
-            
         }
         else{
             println("passou 5")
             println(error)
         }
+        dispatch_group_leave(group)
         
     }
     
@@ -58,12 +59,35 @@ func getWebContent(method:String, postVariables:String) -> JSON {
     
     return json!;
 }
+    
 // computes the hash value for the password
 func sha256(data : NSData) -> NSString {
     var hash = [UInt8](count: Int(CC_MD5_DIGEST_LENGTH), repeatedValue: 0)
     CC_MD5(data.bytes, CC_LONG(data.length), &hash)
     let res = NSData(bytes: hash, length: Int(CC_MD5_DIGEST_LENGTH))
     return res.hexString()
+}
+    
+func UIColorFromHex (hex:String, alpha:CGFloat) -> UIColor {
+    var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    
+    if (cString.hasPrefix("#")) {
+        cString = cString.substringFromIndex(advance(cString.startIndex, 1))
+    }
+    
+    if (count(cString) != 6) {
+        return UIColor.grayColor()
+    }
+    
+    var rgbValue:UInt32 = 0
+    NSScanner(string: cString).scanHexInt(&rgbValue)
+    
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: alpha
+    )
 }
 
 extension NSData {

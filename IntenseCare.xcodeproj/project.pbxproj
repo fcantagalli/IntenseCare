@@ -17,8 +17,15 @@
 		5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */; };
 		5512D1141AB4C85E00F2FF4B /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */; };
 		5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */; };
+		5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520A5501AD763EE004ABAE4 /* GenericViewController.swift */; };
+		55639BEF1AD4BB5A00BE54B1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55639BEE1AD4BB5A00BE54B1 /* SWRevealViewController.m */; };
+		55639BF11AD4BBBE00BE54B1 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */; };
+		55639BF31AD4BD6B00BE54B1 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55639BF21AD4BD6B00BE54B1 /* MenuController.swift */; };
 		559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D266B1ACF06C1000F70CF /* ViewController.swift */; };
+		55B03DB21AEDC34200ACF932 /* InsertPatientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */; };
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
+		55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */; };
+		55FB1CA81AF8EAAD0042405D /* InsertHospitalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */; };
 		55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */; };
 		55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */; };
 		55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBE1E11AB489FE00655C61 /* Main.storyboard */; };
@@ -51,9 +58,17 @@
 		5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
 		5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
+		5520A5501AD763EE004ABAE4 /* GenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		55639BED1AD4BB5A00BE54B1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		55639BEE1AD4BB5A00BE54B1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		55639BF21AD4BD6B00BE54B1 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		559D266B1ACF06C1000F70CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertPatientVC.swift; sourceTree = "<group>"; };
 		55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55D4970F1AD01CA000BB4039 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListTableViewController.swift; sourceTree = "<group>"; };
+		55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertHospitalVC.swift; sourceTree = "<group>"; };
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,8 +146,14 @@
 				55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */,
 				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
 				550C622E1ACF77A900DF58BB /* Resource.swift */,
-				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
 				7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */,
+				55639BF21AD4BD6B00BE54B1 /* MenuController.swift */,
+				55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */,
+				5520A5501AD763EE004ABAE4 /* GenericViewController.swift */,
+				55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */,
+				55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */,
+				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
+				55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */,
 				7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */,
 				55FBE1E41AB489FE00655C61 /* Images.xcassets */,
 				55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */,
@@ -170,6 +191,8 @@
 		55FBE2031AB48FFE00655C61 /* External Module */ = {
 			isa = PBXGroup;
 			children = (
+				55639BED1AD4BB5A00BE54B1 /* SWRevealViewController.h */,
+				55639BEE1AD4BB5A00BE54B1 /* SWRevealViewController.m */,
 				55FBE2011AB48FEB00655C61 /* SwiftyJSON.swift */,
 			);
 			name = "External Module";
@@ -261,6 +284,7 @@
 				55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */,
 				5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */,
 				5512D10E1AB4C85E00F2FF4B /* Ubuntu-RI.ttf in Resources */,
+				55639BF11AD4BBBE00BE54B1 /* SideMenu.storyboard in Resources */,
 				55FBE1E81AB489FE00655C61 /* LaunchScreen.xib in Resources */,
 				55FBE1E51AB489FE00655C61 /* Images.xcassets in Resources */,
 				5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */,
@@ -286,8 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */,
+				55639BF31AD4BD6B00BE54B1 /* MenuController.swift in Sources */,
+				5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */,
+				55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */,
 				55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */,
 				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
+				55639BEF1AD4BB5A00BE54B1 /* SWRevealViewController.m in Sources */,
+				55FB1CA81AF8EAAD0042405D /* InsertHospitalVC.swift in Sources */,
+				55B03DB21AEDC34200ACF932 /* InsertPatientVC.swift in Sources */,
 				55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */,
 				7BA4D11F1ABF15E800CB1693 /* CellPatientTableViewCell.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
