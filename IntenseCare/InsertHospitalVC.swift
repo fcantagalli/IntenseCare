@@ -33,43 +33,73 @@ class InsertHospital:UIViewController, UITextFieldDelegate {
             nameTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital name",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
         }
+        else {
+            postParam = "name="+nameTF.text
+        }
         if address1TF.text == "" {
             println("address1 can´t be empty")
             address1TF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital address1",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
+        }
+        else {
+            postParam = postParam + "&address1="+address1TF.text
         }
         if address2TF.text == "" {
             println("address2 can´t be empty")
             address2TF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital address2",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
         }
+        else {
+            postParam = postParam + "&address2=" + address2TF.text
+        }
         if numberTF.text == ""{
             println("number can´t be empty")
             numberTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital number",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
+        }
+        else {
+            postParam = postParam + "&number=" + numberTF.text
         }
         if cityTF.text == "" {
             println("city can´t be empty")
             cityTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert the City where it is located",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
         }
+        else{
+            postParam = postParam + "&city=" + cityTF.text
+        }
         if stateTF.text == "" {
             println("state can´t be empty")
             stateTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert the State where it is located",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
         }
-        
+        else{
+            postParam = postParam + "&state=" + stateTF.text
+        }
         if zipTF.text == "" {
             println("zip can´t be empty")
             zipTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital zip code",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
+        }
+        else {
+            postParam = postParam + "&zip=" + zipTF.text
         }
         if phoneTF.text == "" {
             println("phone can´t be empty")
             phoneTF.attributedPlaceholder = NSAttributedString(string: " Can't be empty. Insert Hospital phone number",attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
             return
         }
+        else {
+            postParam = postParam + "&phone=" + phoneTF.text
+        }
         
+        // Not required
+        if bedsTF.text != "" {
+            postParam = postParam + "&beds=" + bedsTF.text
+        }
+        
+        var result = WebServiceResource.getWebContent(WebServiceResource.INSERT_HOSPITAL, postVariables: postParam)
+        println(result)
     }
 
     

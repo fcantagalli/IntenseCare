@@ -98,7 +98,7 @@ class InsertPatientCV:UIViewController,UITextFieldDelegate {
         }
         println(postParam)
         
-        var result = getWebContent(INSERT_PATIENT, postParam)
+        var result = WebServiceResource.getWebContent(WebServiceResource.INSERT_PATIENT, postVariables: postParam)
         println(result)
     }
     

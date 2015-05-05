@@ -9,56 +9,58 @@
 import Foundation
 import UIKit
 
-    let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
-    let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
-    let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
-    let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
-    
-func getWebContent(method:String, postVariables:String?) -> JSON {
-    
-    //URL request
-    var url = NSURL(string:method)
-    println("passou 1")
-    //creating post request
-    
-    var request = NSMutableURLRequest(URL: url!)
-    request.HTTPMethod = "POST"
-    println("passou 2")
-    // setting POST parameters
-    if postVariables != nil{
-        var dataString = postVariables!
-        let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
-        request.HTTPBody = requestBodyData
-    }
-        println("passou 3")
-    
-    var json:JSON?
-    let group = dispatch_group_create()
-    let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-        (data,response,error) in
-        println("passou 4")
-        if error == nil { // it worked
-            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
-            //println("passou 6")
-            var jsonaux:JSON = JSON(data: data)
-            println(jsonaux)
+        struct WebServiceResource {
+            static let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
+            static let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
+            static let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
+            static let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
             
-            json =  jsonaux;
-        }
-        else{
-            println("passou 5")
-            println(error)
-        }
-        dispatch_group_leave(group)
-        
+            static func getWebContent(method:String, postVariables:String?) -> JSON {
+                
+                //URL request
+                var url = NSURL(string:method)
+                println("passou 1")
+                //creating post request
+                
+                var request = NSMutableURLRequest(URL: url!)
+                request.HTTPMethod = "POST"
+                println("passou 2")
+                // setting POST parameters
+                if postVariables != nil{
+                    var dataString = postVariables!
+                    let requestBodyData = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+                    request.HTTPBody = requestBodyData
+                }
+                println("passou 3")
+                
+                var json:JSON?
+                let group = dispatch_group_create()
+                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                    (data,response,error) in
+                    println("passou 4")
+                    if error == nil { // it worked
+                        //println(NSString(data: data, encoding: NSUTF8StringEncoding))
+                        //println("passou 6")
+                        var jsonaux:JSON = JSON(data: data)
+                        println(jsonaux)
+                        
+                        json =  jsonaux;
+                    }
+                    else{
+                        println("passou 5")
+                        println(error)
+                    }
+                    dispatch_group_leave(group)
+                    
+                }
+                
+                dispatch_group_enter(group)
+                task.resume()
+                dispatch_group_wait(group, DISPATCH_TIME_FOREVER)
+                
+                return json!;
+            }
     }
-    
-    dispatch_group_enter(group)
-    task.resume()
-    dispatch_group_wait(group, DISPATCH_TIME_FOREVER)
-    
-    return json!;
-}
     
 // computes the hash value for the password
 func sha256(data : NSData) -> NSString {
