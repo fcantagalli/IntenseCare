@@ -24,7 +24,14 @@
 		559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D266B1ACF06C1000F70CF /* ViewController.swift */; };
 		55B03DB21AEDC34200ACF932 /* InsertPatientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */; };
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
+		55E3D7D21AF9546E009C8BA3 /* Consultation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */; };
+		55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */; };
 		55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */; };
+		55FA00261AF95B1F00EC67D5 /* MyCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55FA00251AF95B1F00EC67D5 /* MyCustomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55FA002C1AF95B1F00EC67D5 /* MyCustomView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */; };
+		55FA00351AF95B1F00EC67D5 /* MyCustomViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA00341AF95B1F00EC67D5 /* MyCustomViewTests.swift */; };
+		55FA00381AF95B1F00EC67D5 /* MyCustomView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */; };
+		55FA00391AF95B1F00EC67D5 /* MyCustomView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55FB1CA81AF8EAAD0042405D /* InsertHospitalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */; };
 		55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */; };
 		55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */; };
@@ -38,6 +45,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		55FA002D1AF95B1F00EC67D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FBE1D01AB489FE00655C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FA00201AF95B1E00EC67D5;
+			remoteInfo = MyCustomView;
+		};
+		55FA002F1AF95B1F00EC67D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FBE1D01AB489FE00655C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FBE1D71AB489FE00655C61;
+			remoteInfo = IntenseCare;
+		};
+		55FA00361AF95B1F00EC67D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FBE1D01AB489FE00655C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FA00201AF95B1E00EC67D5;
+			remoteInfo = MyCustomView;
+		};
 		55FBE1EE1AB489FE00655C61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 55FBE1D01AB489FE00655C61 /* Project object */;
@@ -46,6 +74,20 @@
 			remoteInfo = IntenseCare;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55FA003F1AF95B1F00EC67D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				55FA00391AF95B1F00EC67D5 /* MyCustomView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		550C622E1ACF77A900DF58BB /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
@@ -67,7 +109,15 @@
 		55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertPatientVC.swift; sourceTree = "<group>"; };
 		55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55D4970F1AD01CA000BB4039 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consultation.storyboard; sourceTree = "<group>"; };
+		55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextBackground.swift; sourceTree = "<group>"; };
 		55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListTableViewController.swift; sourceTree = "<group>"; };
+		55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyCustomView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FA00241AF95B1F00EC67D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FA00251AF95B1F00EC67D5 /* MyCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCustomView.h; sourceTree = "<group>"; };
+		55FA002B1AF95B1F00EC67D5 /* MyCustomViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCustomViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FA00331AF95B1F00EC67D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FA00341AF95B1F00EC67D5 /* MyCustomViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewTests.swift; sourceTree = "<group>"; };
 		55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertHospitalVC.swift; sourceTree = "<group>"; };
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,10 +135,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		55FA001D1AF95B1E00EC67D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FA00281AF95B1F00EC67D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FA002C1AF95B1F00EC67D5 /* MyCustomView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55FBE1D51AB489FE00655C61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FA00381AF95B1F00EC67D5 /* MyCustomView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +168,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55005D051AF9501D000499A6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		5512D1031AB4C84500F2FF4B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +192,47 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		55FA00221AF95B1F00EC67D5 /* MyCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				55FA00251AF95B1F00EC67D5 /* MyCustomView.h */,
+				55FA00231AF95B1F00EC67D5 /* Supporting Files */,
+			);
+			path = MyCustomView;
+			sourceTree = "<group>";
+		};
+		55FA00231AF95B1F00EC67D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55FA00241AF95B1F00EC67D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55FA00311AF95B1F00EC67D5 /* MyCustomViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				55FA00341AF95B1F00EC67D5 /* MyCustomViewTests.swift */,
+				55FA00321AF95B1F00EC67D5 /* Supporting Files */,
+			);
+			path = MyCustomViewTests;
+			sourceTree = "<group>";
+		};
+		55FA00321AF95B1F00EC67D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55FA00331AF95B1F00EC67D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		55FBE1CF1AB489FE00655C61 = {
 			isa = PBXGroup;
 			children = (
 				55FBE1DA1AB489FE00655C61 /* IntenseCare */,
 				55FBE1F01AB489FE00655C61 /* IntenseCareTests */,
+				55FA00221AF95B1F00EC67D5 /* MyCustomView */,
+				55FA00311AF95B1F00EC67D5 /* MyCustomViewTests */,
 				55FBE1D91AB489FE00655C61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +242,8 @@
 			children = (
 				55FBE1D81AB489FE00655C61 /* IntenseCare.app */,
 				55FBE1ED1AB489FE00655C61 /* IntenseCareTests.xctest */,
+				55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */,
+				55FA002B1AF95B1F00EC67D5 /* MyCustomViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +251,7 @@
 		55FBE1DA1AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXGroup;
 			children = (
+				55005D051AF9501D000499A6 /* CustomViews */,
 				5512D1031AB4C84500F2FF4B /* Resource */,
 				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
@@ -154,6 +267,7 @@
 				55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
 				55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */,
+				55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */,
 				7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */,
 				55FBE1E41AB489FE00655C61 /* Images.xcassets */,
 				55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */,
@@ -200,7 +314,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		55FA001E1AF95B1E00EC67D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FA00261AF95B1F00EC67D5 /* MyCustomView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		55FA00201AF95B1E00EC67D5 /* MyCustomView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FA003E1AF95B1F00EC67D5 /* Build configuration list for PBXNativeTarget "MyCustomView" */;
+			buildPhases = (
+				55FA001C1AF95B1E00EC67D5 /* Sources */,
+				55FA001D1AF95B1E00EC67D5 /* Frameworks */,
+				55FA001E1AF95B1E00EC67D5 /* Headers */,
+				55FA001F1AF95B1E00EC67D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCustomView;
+			productName = MyCustomView;
+			productReference = 55FA00211AF95B1E00EC67D5 /* MyCustomView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		55FA002A1AF95B1F00EC67D5 /* MyCustomViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FA00401AF95B1F00EC67D5 /* Build configuration list for PBXNativeTarget "MyCustomViewTests" */;
+			buildPhases = (
+				55FA00271AF95B1F00EC67D5 /* Sources */,
+				55FA00281AF95B1F00EC67D5 /* Frameworks */,
+				55FA00291AF95B1F00EC67D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FA002E1AF95B1F00EC67D5 /* PBXTargetDependency */,
+				55FA00301AF95B1F00EC67D5 /* PBXTargetDependency */,
+			);
+			name = MyCustomViewTests;
+			productName = MyCustomViewTests;
+			productReference = 55FA002B1AF95B1F00EC67D5 /* MyCustomViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		55FBE1D71AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55FBE1F71AB489FE00655C61 /* Build configuration list for PBXNativeTarget "IntenseCare" */;
@@ -208,10 +370,12 @@
 				55FBE1D41AB489FE00655C61 /* Sources */,
 				55FBE1D51AB489FE00655C61 /* Frameworks */,
 				55FBE1D61AB489FE00655C61 /* Resources */,
+				55FA003F1AF95B1F00EC67D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				55FA00371AF95B1F00EC67D5 /* PBXTargetDependency */,
 			);
 			name = IntenseCare;
 			productName = IntenseCare;
@@ -245,6 +409,13 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = felanca;
 				TargetAttributes = {
+					55FA00201AF95B1E00EC67D5 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					55FA002A1AF95B1F00EC67D5 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 55FBE1D71AB489FE00655C61;
+					};
 					55FBE1D71AB489FE00655C61 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -269,16 +440,33 @@
 			targets = (
 				55FBE1D71AB489FE00655C61 /* IntenseCare */,
 				55FBE1EC1AB489FE00655C61 /* IntenseCareTests */,
+				55FA00201AF95B1E00EC67D5 /* MyCustomView */,
+				55FA002A1AF95B1F00EC67D5 /* MyCustomViewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		55FA001F1AF95B1E00EC67D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FA00291AF95B1F00EC67D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55FBE1D61AB489FE00655C61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5512D10F1AB4C85E00F2FF4B /* Ubuntu-L.ttf in Resources */,
+				55E3D7D21AF9546E009C8BA3 /* Consultation.storyboard in Resources */,
 				7BA4D11B1ABF132900CB1693 /* BihStoryboard.storyboard in Resources */,
 				5512D1101AB4C85E00F2FF4B /* Ubuntu-BI.ttf in Resources */,
 				55FBE1E31AB489FE00655C61 /* Main.storyboard in Resources */,
@@ -305,11 +493,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		55FA001C1AF95B1E00EC67D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FA00271AF95B1F00EC67D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FA00351AF95B1F00EC67D5 /* MyCustomViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		55FBE1D41AB489FE00655C61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */,
+				55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */,
 				55639BF31AD4BD6B00BE54B1 /* MenuController.swift in Sources */,
 				5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */,
 				55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */,
@@ -336,6 +540,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		55FA002E1AF95B1F00EC67D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FA00201AF95B1E00EC67D5 /* MyCustomView */;
+			targetProxy = 55FA002D1AF95B1F00EC67D5 /* PBXContainerItemProxy */;
+		};
+		55FA00301AF95B1F00EC67D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FBE1D71AB489FE00655C61 /* IntenseCare */;
+			targetProxy = 55FA002F1AF95B1F00EC67D5 /* PBXContainerItemProxy */;
+		};
+		55FA00371AF95B1F00EC67D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FA00201AF95B1E00EC67D5 /* MyCustomView */;
+			targetProxy = 55FA00361AF95B1F00EC67D5 /* PBXContainerItemProxy */;
+		};
 		55FBE1EF1AB489FE00655C61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 55FBE1D71AB489FE00655C61 /* IntenseCare */;
@@ -363,6 +582,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		55FA003A1AF95B1F00EC67D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyCustomView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55FA003B1AF95B1F00EC67D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = MyCustomView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55FA003C1AF95B1F00EC67D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyCustomViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntenseCare.app/IntenseCare";
+			};
+			name = Debug;
+		};
+		55FA003D1AF95B1F00EC67D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = MyCustomViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntenseCare.app/IntenseCare";
+			};
+			name = Release;
+		};
 		55FBE1F51AB489FE00655C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -510,6 +815,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		55FA003E1AF95B1F00EC67D5 /* Build configuration list for PBXNativeTarget "MyCustomView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FA003A1AF95B1F00EC67D5 /* Debug */,
+				55FA003B1AF95B1F00EC67D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FA00401AF95B1F00EC67D5 /* Build configuration list for PBXNativeTarget "MyCustomViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FA003C1AF95B1F00EC67D5 /* Debug */,
+				55FA003D1AF95B1F00EC67D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55FBE1D31AB489FE00655C61 /* Build configuration list for PBXProject "IntenseCare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

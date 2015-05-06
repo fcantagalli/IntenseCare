@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
         
         var postVar = "hospital_id=1"
-        tableContent = getWebContent(GET_PATIENT_BY_HOSPITAL_ID, postVar)
+        tableContent = WebServiceResource.getWebContent(WebServiceResource.GET_PATIENT_BY_HOSPITAL_ID, postVariables: postVar)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

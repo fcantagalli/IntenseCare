@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MyCustomView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>55FA00201AF95B1E00EC67D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55FA002A1AF95B1F00EC67D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55FBE1D71AB489FE00655C61</key>
 		<dict>
 			<key>primary</key>

@@ -34,6 +34,20 @@
                ReferencedContainer = "container:IntenseCare.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "55FA002A1AF95B1F00EC67D5"
+               BuildableName = "MyCustomViewTests.xctest"
+               BlueprintName = "MyCustomViewTests"
+               ReferencedContainer = "container:IntenseCare.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "55FBE1EC1AB489FE00655C61"
                BuildableName = "IntenseCareTests.xctest"
                BlueprintName = "IntenseCareTests"
+               ReferencedContainer = "container:IntenseCare.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "55FA002A1AF95B1F00EC67D5"
+               BuildableName = "MyCustomViewTests.xctest"
+               BlueprintName = "MyCustomViewTests"
                ReferencedContainer = "container:IntenseCare.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -72,7 +96,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55FBE1D71AB489FE00655C61"
@@ -90,7 +115,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55FBE1D71AB489FE00655C61"

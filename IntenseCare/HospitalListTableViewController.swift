@@ -17,7 +17,7 @@ class HospitalList:UIViewController, UITableViewDelegate   {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableContent = getWebContent(GET_HOSPITALS, nil)
+        tableContent = WebServiceResource.getWebContent(WebServiceResource.GET_HOSPITALS, postVariables: nil)
         
         //hospitalTV.reloadData()
     }
