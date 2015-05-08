@@ -193,7 +193,9 @@ class LoginViewController: UIViewController {
         
     }
     func pinPadDidHide() {
-        
+        var storyboard:UIStoryboard = UIStoryboard(name: "SideMenu", bundle: nil)
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("SideMenuViewController") as! SWRevealViewController
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
     

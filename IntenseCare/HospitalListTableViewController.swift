@@ -10,12 +10,27 @@ import UIKit
 
 class HospitalList:UIViewController, UITableViewDelegate   {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var hospitalTV: UITableView!
+    
+    @IBAction func AddHospital(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("InsertHospital") as! UIViewController
+        //self.presentViewController(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
+       // self.navigationItem.title = ""
+    }
     
     var tableContent:JSON!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         tableContent = WebServiceResource.getWebContent(WebServiceResource.GET_HOSPITALS, postVariables: nil)
         

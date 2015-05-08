@@ -21,6 +21,12 @@ class ViewController: UIViewController, UITableViewDelegate {
     let green = UIColor(red: 17, green: 168, blue: 171, alpha: 1)
     let orange = UIColor(red: 252, green: 177, blue: 80, alpha: 1)
     
+    @IBAction func addPatient(sender: AnyObject) {
+        
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("InsertPatient") as! UIViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return cellContent.count
+        println(cellContent.count)
+        return (cellContent.count-1)
     }
     
    /* func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -63,13 +70,13 @@ class ViewController: UIViewController, UITableViewDelegate {
         applyShadowOnCell(cell)
         
         cell.setCellViewController(self)
-        //cell.patientId = tableContent[indexPath.row]["patient_id"].intValue
-        cell.patientName.text = cellContent[indexPath.section]
-        //cell.patientName.text = tableContent[indexPath.row]["name"].stringValue
-        cell.patientAge.text = ageContent[indexPath.section]
-        //cell.patientAge.text = tableContent[indexPath.row]["birth"].stringValue
-        cell.patientBed.text = bedContent[indexPath.section]
-        //cell.patientBed.text = tableContent[indexPath.row]["bed"].stringValue
+        cell.patientId = tableContent[indexPath.section]["patient_id"].intValue
+       // cell.patientName.text = cellContent[indexPath.section]
+        cell.patientName.text = tableContent[indexPath.section]["name"].stringValue
+        //cell.patientAge.text = ageContent[indexPath.section]
+        cell.patientAge.text = tableContent[indexPath.section]["birth"].stringValue
+        //cell.patientBed.text = bedContent[indexPath.section]
+        cell.patientBed.text = tableContent[indexPath.section]["bed"].stringValue
         
         if (cell.patientName.text=="Felipe") {
             cell.contentView.backgroundColor = UIColorFromHex("E64C65", 1.0)

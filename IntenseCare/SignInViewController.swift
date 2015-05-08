@@ -50,9 +50,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         NSUserDefaults.standardUserDefaults().setObject(pass1sha, forKey: "password1")
         NSUserDefaults.standardUserDefaults().setObject(pass2sha, forKey: "password2")
-        //NSUserDefaults.standardUserDefaults().setObject(tfName.text, forKey: "name")
-       // NSUserDefaults.standardUserDefaults().setObject(tfemail, forKey: "email")
+        NSUserDefaults.standardUserDefaults().setObject(tfName.text, forKey: "name")
+        NSUserDefaults.standardUserDefaults().setObject(tfemail.text, forKey: "email")
         
+        var storyboard:UIStoryboard = self.storyboard!
+        
+        var viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+        self.presentViewController(viewController, animated: true, completion: nil)
+        //sender.window?.rootViewController = viewController;
+        //sender.window?.makeKeyAndVisible()
     }
     
     override func viewDidLoad() {

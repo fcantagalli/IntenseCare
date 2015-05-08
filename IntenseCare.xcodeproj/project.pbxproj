@@ -24,6 +24,7 @@
 		559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D266B1ACF06C1000F70CF /* ViewController.swift */; };
 		55B03DB21AEDC34200ACF932 /* InsertPatientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */; };
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
+		55C4B4E51AFA527000DCA590 /* ConsultationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B4E41AFA527000DCA590 /* ConsultationVC.swift */; };
 		55E3D7D21AF9546E009C8BA3 /* Consultation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */; };
 		55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */; };
 		55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */; };
@@ -108,6 +109,7 @@
 		559D266B1ACF06C1000F70CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertPatientVC.swift; sourceTree = "<group>"; };
 		55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		55C4B4E41AFA527000DCA590 /* ConsultationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultationVC.swift; sourceTree = "<group>"; };
 		55D4970F1AD01CA000BB4039 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consultation.storyboard; sourceTree = "<group>"; };
 		55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextBackground.swift; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		55C4B4E31AFA51FD00DCA590 /* Consultation Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				55C4B4E41AFA527000DCA590 /* ConsultationVC.swift */,
+			);
+			name = "Consultation Tabs";
+			sourceTree = "<group>";
+		};
 		55FA00221AF95B1F00EC67D5 /* MyCustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +270,7 @@
 				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
 				550C622E1ACF77A900DF58BB /* Resource.swift */,
 				7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */,
+				55C4B4E31AFA51FD00DCA590 /* Consultation Tabs */,
 				55639BF21AD4BD6B00BE54B1 /* MenuController.swift */,
 				55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */,
 				5520A5501AD763EE004ABAE4 /* GenericViewController.swift */,
@@ -514,6 +525,7 @@
 			files = (
 				559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */,
 				55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */,
+				55C4B4E51AFA527000DCA590 /* ConsultationVC.swift in Sources */,
 				55639BF31AD4BD6B00BE54B1 /* MenuController.swift in Sources */,
 				5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */,
 				55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */,

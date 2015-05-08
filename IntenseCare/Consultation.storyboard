@@ -21,7 +21,7 @@
         <!--Item 2-->
         <scene sceneID="WH6-ds-Ggu">
             <objects>
-                <viewController id="WiJ-bl-2jj" customClass="GenericViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WiJ-bl-2jj" customClass="ConsultationViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NT0-Yw-FTB"/>
                         <viewControllerLayoutGuide type="bottom" id="Kep-0G-YcY"/>
@@ -30,31 +30,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFI-OA-XKq">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Nervous System" id="Iub-gc-e3f">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Wv7-kS-gDp">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glasgow coma score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-pc-ZPv">
-                                <rect key="frame" x="16" y="82" width="179" height="21"/>
+                                <rect key="frame" x="16" y="67" width="179" height="21"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-0b-Q58" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="111" width="288" height="50"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dub-F0-jvr" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="273" width="288" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="number 0 - 14" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4GU-mk-x1H">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg/dL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ICk-gG-wLG">
                                         <rect key="frame" x="8" y="10" width="272" height="30"/>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,97 +47,80 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bilirubin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTp-1U-6kz">
+                                <rect key="frame" x="16" y="244" width="124" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-SQ-SRO">
+                                <rect key="frame" x="0.0" y="178" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HL-JG-XoT">
+                                        <rect key="frame" x="254" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="liverSaveButton:" destination="WiJ-bl-2jj" eventType="touchUpInside" id="2iJ-cZ-66i"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-YZ-YPo">
+                                        <rect key="frame" x="90" y="0.0" width="140" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-Md-UO1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nervous System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkM-oW-xBp">
+                                        <rect key="frame" x="90" y="0.0" width="140" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-JC-ZTx">
+                                        <rect key="frame" x="259" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="NervousSaveButton:" destination="WiJ-bl-2jj" eventType="touchUpInside" id="z6Q-0C-JY6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-0b-Q58" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="96" width="288" height="49"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="number 0 - 14" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4GU-mk-x1H">
+                                        <rect key="frame" x="13" y="10" width="267" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="1tF-rg-1Bj"/>
+                    <connections>
+                        <outlet property="bilirubinTF" destination="ICk-gG-wLG" id="hfi-xy-7VU"/>
+                        <outlet property="glasgowTF" destination="4GU-mk-x1H" id="NM4-p6-A3C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR6-Ve-eLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933" y="756"/>
         </scene>
-        <!--Item 5-->
-        <scene sceneID="cl2-pQ-RR9">
-            <objects>
-                <viewController id="Vp7-C0-nva" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3vJ-0j-Yxk"/>
-                        <viewControllerLayoutGuide type="bottom" id="RHe-me-8I0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="B6P-bA-06R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5c-H2-ege">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Coagulation" id="L1f-Vg-CwK">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="DZ6-dV-QFK">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-8G-QTp">
-                                <rect key="frame" x="16" y="82" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QrB-wj-C3s" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="111" width="288" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VgG-jE-vti">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 5" id="KeC-zd-aVa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ro6-Cf-fOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488" y="756"/>
-        </scene>
         <!--Item 3-->
         <scene sceneID="5Qk-TG-YVt">
             <objects>
-                <viewController title="Item 3" id="ANk-eK-KFu" sceneMemberID="viewController">
+                <viewController title="Item 3" id="ANk-eK-KFu" customClass="ConsultationViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xTO-Ke-8sJ"/>
                         <viewControllerLayoutGuide type="bottom" id="uL2-vJ-2zO"/>
@@ -161,21 +129,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tU6-lf-yqb">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Cardio Vascular System" id="sWj-Bw-Maf">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="xq1-GN-aGu">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-6v-SXB">
                                 <rect key="frame" x="16" y="80" width="124" height="21"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
@@ -193,21 +146,66 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vasopressors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Y8-ipg">
                                 <rect key="frame" x="16" y="196" width="207" height="26"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-kG-HS7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cardio Vascular System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-83-ZFp">
+                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-yv-tLk">
+                                        <rect key="frame" x="259" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="CardioSaveButton:" destination="ANk-eK-KFu" eventType="touchUpInside" id="X5U-dd-Fsp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-Vb-MNy">
+                                <rect key="frame" x="0.0" y="251" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coagulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFl-hJ-iNg">
+                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lx9-R8-X1k">
+                                        <rect key="frame" x="259" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="coagulationSaveButton:" destination="ANk-eK-KFu" eventType="touchUpInside" id="PvP-oy-Buw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-dV-VVS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="339" width="288" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alg-dw-V9E">
+                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32f-jR-nDZ">
+                                <rect key="frame" x="16" y="310" width="124" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -217,18 +215,23 @@
                                 <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 3" id="aD5-AT-CAk"/>
+                    <connections>
+                        <outlet property="mapTF" destination="bkp-bW-us2" id="8h3-5Q-Z3L"/>
+                        <outlet property="plateletsTF" destination="alg-dw-V9E" id="ZEc-jX-uaa"/>
+                        <outlet property="vasopressorsSwitch" destination="wTC-ho-XxW" id="BDP-KM-ub7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfS-iF-F4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933" y="1412"/>
         </scene>
-        <!--Item 6-->
+        <!--Item 4-->
         <scene sceneID="D8E-rA-Lbh">
             <objects>
-                <viewController id="fCY-et-SiI" sceneMemberID="viewController">
+                <viewController id="fCY-et-SiI" customClass="ConsultationViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a9C-CH-hyl"/>
                         <viewControllerLayoutGuide type="bottom" id="5vh-gT-3dZ"/>
@@ -237,22 +240,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mV9-Yn-BUI">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Renal System" id="yR1-FP-ov5">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="AXh-YV-5WC">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Creatinine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6p-xc-bB6">
                                 <rect key="frame" x="16" y="76" width="124" height="21"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
@@ -270,17 +257,6 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urine Output" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-dt-Y5o">
                                 <rect key="frame" x="16" y="174" width="124" height="21"/>
@@ -299,97 +275,43 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1v-Jf-oam">
+                                <rect key="frame" x="0.0" y="24" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Renal System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-uA-EvF">
+                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIo-DC-0Qb">
+                                        <rect key="frame" x="259" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="renalSaveButton:" destination="fCY-et-SiI" eventType="touchUpInside" id="VNI-Vk-sm4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 6" id="HM5-uB-Zed"/>
+                    <tabBarItem key="tabBarItem" title="Item 4" id="HM5-uB-Zed"/>
+                    <connections>
+                        <outlet property="creatinineTF" destination="nBG-0r-CJI" id="IbR-uz-hc7"/>
+                        <outlet property="urineTF" destination="iQd-Wn-RIv" id="7cv-tm-s7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lC7-pP-h78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1488" y="1412"/>
         </scene>
-        <!--Item 4-->
-        <scene sceneID="VoM-rk-acn">
-            <objects>
-                <viewController id="CO6-Vp-8ZU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ujn-qv-mUF"/>
-                        <viewControllerLayoutGuide type="bottom" id="XSB-fe-fUu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yQF-Fl-lDH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSd-rM-o4x">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Liver" id="SoZ-7Q-m2K">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="csN-h9-jwX">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-QW-DDe" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="109" width="288" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg/dL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXG-UQ-7Qt">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bilirubin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcB-nE-pLW">
-                                <rect key="frame" x="16" y="80" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 4" id="5pQ-NH-HM3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgm-hp-z6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488" y="100"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="Qg3-Mo-AlV">
             <objects>
-                <viewController id="uuK-1u-vVF" customClass="GenericViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uuK-1u-vVF" customClass="ConsultationViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xsv-7f-dkP"/>
                         <viewControllerLayoutGuide type="bottom" id="B4S-Xr-nfn"/>
@@ -398,22 +320,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2M-7r-ecM">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Respiratory System" id="LPB-wb-q9t">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="laV-8J-Jl3">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FiO2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35I-H6-ESM">
                                 <rect key="frame" x="16" y="79" width="74" height="21"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
@@ -437,39 +343,19 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.28805059344311079" green="0.31978081438840272" blue="0.47728168816431205" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iR-05-olG" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                 <rect key="frame" x="16" y="205" width="288" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RT-rf-fDr">
+                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RT-rf-fDr">
-                                <rect key="frame" x="26" y="215" width="272" height="30"/>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mechanical Ventilation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhR-g4-ORH">
                                 <rect key="frame" x="16" y="283" width="207" height="26"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="19"/>
@@ -481,11 +367,35 @@
                                 <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-vs-BF6">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Respiratory System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxH-Ef-lAA">
+                                        <rect key="frame" x="90" y="0.0" width="151" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-nr-Soh">
+                                        <rect key="frame" x="259" y="8" width="53" height="28"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="RespiratorySaveButton:" destination="uuK-1u-vVF" eventType="touchUpInside" id="1Rj-7L-tar"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.18823529410000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Yeh-BE-K7m"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="FIO2TF" destination="gvn-4K-iOS" id="Xkm-Gu-ShN"/>
+                        <outlet property="mechVentSwitch" destination="PjC-TD-XZ4" id="5Ns-BX-YZu"/>
+                        <outlet property="pa02" destination="4RT-rf-fDr" id="azV-nh-D3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7x1-C1-35p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,20 +404,20 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ZX5-J7-lN0">
             <objects>
-                <tabBarController id="YDX-Xk-OzD" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Consultation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YDX-Xk-OzD" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="wOX-lm-eGN">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" itemPositioning="fill" id="wOX-lm-eGN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.15686274510000001" green="0.64313725489999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="uuK-1u-vVF" kind="relationship" relationship="viewControllers" id="Lq0-HC-0or"/>
                         <segue destination="WiJ-bl-2jj" kind="relationship" relationship="viewControllers" id="3hT-fW-SZv"/>
                         <segue destination="ANk-eK-KFu" kind="relationship" relationship="viewControllers" id="mGF-8x-WOW"/>
-                        <segue destination="CO6-Vp-8ZU" kind="relationship" relationship="viewControllers" id="897-Yk-mOa"/>
-                        <segue destination="Vp7-C0-nva" kind="relationship" relationship="viewControllers" id="2Vh-od-PgP"/>
                         <segue destination="fCY-et-SiI" kind="relationship" relationship="viewControllers" id="NCy-zu-hlQ"/>
                     </connections>
                 </tabBarController>

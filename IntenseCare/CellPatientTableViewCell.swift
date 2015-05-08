@@ -25,6 +25,9 @@ class CellPatientTableViewCell: UITableViewCell {
         
         let consultation = UIAlertAction(title: "Do consultation", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("consultation")
+            var storyboard = UIStoryboard(name: "Consultation", bundle: nil)
+            var viewController:UITabBarController = storyboard.instantiateViewControllerWithIdentifier("Consultation") as! UITabBarController
+            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
         }
         let history = UIAlertAction(title: "Change bed", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("history")

@@ -102,7 +102,7 @@
         <!--Insert PatientCV-->
         <scene sceneID="tER-DO-8Iq">
             <objects>
-                <viewController id="N7m-U4-5DM" customClass="InsertPatientCV" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InsertPatient" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N7m-U4-5DM" customClass="InsertPatientCV" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eTT-Hc-Kfe"/>
                         <viewControllerLayoutGuide type="bottom" id="hTb-zR-JIY"/>
@@ -339,20 +339,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG8-lC-hlS">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8aB-fT-9xV"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.066666666666666666" green="0.6588235294117647" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="intenseCare - Register" id="Wa9-ui-Dwm"/>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg1-0U-BfM">
                                 <rect key="frame" x="7" y="45" width="288" height="52"/>
                             </view>
@@ -459,10 +445,23 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG8-lC-hlS">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8aB-fT-9xV"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="intenseCare - Register" id="Wa9-ui-Dwm"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mG8-lC-hlS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0C3-6U-KiV"/>
                             <constraint firstItem="8rg-nY-fCJ" firstAttribute="trailing" secondItem="cHK-Vm-pV0" secondAttribute="trailing" id="6Oc-aU-WZ5"/>
                             <constraint firstItem="tnO-IS-j1l" firstAttribute="top" secondItem="EnC-kt-DtM" secondAttribute="bottom" constant="20" id="8yT-J9-Hqz"/>
                             <constraint firstItem="tnO-IS-j1l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ABJ-xf-1Dw"/>
@@ -513,6 +512,7 @@
                             <constraint firstItem="4w6-ad-tsG" firstAttribute="top" secondItem="VU3-yY-q4b" secondAttribute="bottom" constant="30" id="t7G-cx-8x0"/>
                             <constraint firstItem="SUe-5H-exj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="tLl-Pn-LhP"/>
                             <constraint firstItem="EnC-kt-DtM" firstAttribute="top" secondItem="cHK-Vm-pV0" secondAttribute="bottom" constant="31" id="w69-Yg-3tc"/>
+                            <constraint firstItem="mG8-lC-hlS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wDh-jZ-NSm"/>
                             <constraint firstItem="8rg-nY-fCJ" firstAttribute="leading" secondItem="hcd-tb-upr" secondAttribute="leading" id="wgd-Dv-pwc"/>
                             <constraint firstItem="pg1-0U-BfM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-9" id="yCg-cC-uAK"/>
                         </constraints>
@@ -668,16 +668,6 @@
                                     <action selector="resetPin:" destination="3SF-1H-bAL" eventType="touchUpInside" id="FDC-or-yww"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mns-P4-9FD">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.066666666666666666" green="0.6588235294117647" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="intenseCare" id="PvV-ZR-JmU"/>
-                                </items>
-                            </navigationBar>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aex-X9-UuR" userLabel="errorView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="20"/>
                                 <subviews>
@@ -699,6 +689,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mns-P4-9FD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="intenseCare" id="PvV-ZR-JmU"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -717,7 +717,7 @@
         <!--Insert Hospital-->
         <scene sceneID="JwV-Q1-HZ7">
             <objects>
-                <viewController id="4ME-HE-TGh" customClass="InsertHospital" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InsertHospital" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4ME-HE-TGh" customClass="InsertHospital" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IW9-AY-tNb"/>
                         <viewControllerLayoutGuide type="bottom" id="BfJ-Gw-A5R"/>
@@ -726,56 +726,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="835"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" backIndicatorImage="1429080928_stethoscope" backIndicatorTransitionMaskImage="1429080928_stethoscope" translatesAutoresizingMaskIntoConstraints="NO" id="s3d-lp-KpJ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="barTintColor" red="0.25098039220000001" green="0.73725490199999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="0.0"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Insert Hospital" id="iqN-cg-xAv">
-                                        <barButtonItem key="backBarButtonItem" tag="1" title="Back" systemItem="cancel" id="QwV-5M-svk">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-mC-Ukm">
-                                <rect key="frame" x="0.0" y="64" width="321" height="771"/>
+                                <rect key="frame" x="0.0" y="20" width="321" height="815"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-A6-Sg5">
-                                        <rect key="frame" x="16" y="165" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="209" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="vYv-aY-4iR">
-                                        <rect key="frame" x="16" y="93" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="137" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-9p-c2g">
-                                        <rect key="frame" x="16" y="236" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="280" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-3t-bDu">
-                                        <rect key="frame" x="16" y="308" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="352" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="TYG-rg-ir5">
-                                        <rect key="frame" x="16" y="453" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="497" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZFz-hN-g0a">
-                                        <rect key="frame" x="26" y="465" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="509" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="skt-mI-3M5"/>
                                         </constraints>
@@ -784,7 +769,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="oR8-Fu-dsm">
-                                        <rect key="frame" x="16" y="23" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="67" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -800,7 +785,7 @@
                                         </variation>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address1" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9my-sO-i96">
-                                        <rect key="frame" x="26" y="107" width="269" height="26"/>
+                                        <rect key="frame" x="26" y="151" width="269" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="0sl-zj-hdf"/>
                                         </constraints>
@@ -809,7 +794,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address2" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TqN-aB-35C">
-                                        <rect key="frame" x="26" y="177" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="221" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="jMm-CE-dK5"/>
                                         </constraints>
@@ -818,7 +803,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-UL-bu8">
-                                        <rect key="frame" x="26" y="320" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="364" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="J36-6R-hkO"/>
                                         </constraints>
@@ -827,7 +812,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-xC-5bl">
-                                        <rect key="frame" x="26" y="248" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="292" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="A5W-iP-q1C"/>
                                         </constraints>
@@ -836,13 +821,13 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="ULD-Kn-Yc6">
-                                        <rect key="frame" x="16" y="381" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="425" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tb1-gh-I1Z">
-                                        <rect key="frame" x="26" y="393" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="437" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YgA-56-Sq6"/>
                                         </constraints>
@@ -851,19 +836,19 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="G46-kG-zYR">
-                                        <rect key="frame" x="16" y="524" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="568" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flat-Design-UI-Components" translatesAutoresizingMaskIntoConstraints="NO" id="FEE-uT-3CL">
-                                        <rect key="frame" x="16" y="596" width="289" height="54"/>
+                                        <rect key="frame" x="16" y="640" width="289" height="54"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                         </accessibility>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Beds" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vwP-cv-cjH">
-                                        <rect key="frame" x="26" y="606" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="650" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Nek-tN-RcE"/>
                                         </constraints>
@@ -872,7 +857,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="blM-gL-5A3">
-                                        <rect key="frame" x="26" y="536" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="580" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="g4r-ut-J8a"/>
                                         </constraints>
@@ -881,7 +866,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmF-Zi-hrj">
-                                        <rect key="frame" x="110" y="663" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="707" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Dy7-8O-2ZE"/>
                                             <constraint firstAttribute="width" constant="100" id="NuL-bi-NvW"/>
@@ -894,7 +879,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-6W-Vic">
-                                        <rect key="frame" x="26" y="35" width="269" height="30"/>
+                                        <rect key="frame" x="26" y="79" width="269" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Aco-Bc-KuA"/>
                                         </constraints>
@@ -931,7 +916,7 @@
                                     <constraint firstItem="bAb-6W-Vic" firstAttribute="leading" secondItem="lQU-mC-Ukm" secondAttribute="leading" constant="26" id="Huz-cz-6US"/>
                                     <constraint firstItem="blM-gL-5A3" firstAttribute="centerY" secondItem="G46-kG-zYR" secondAttribute="centerY" id="JdH-Rg-amG"/>
                                     <constraint firstItem="blM-gL-5A3" firstAttribute="leading" secondItem="vwP-cv-cjH" secondAttribute="leading" id="Kj0-Vl-PSC"/>
-                                    <constraint firstItem="oR8-Fu-dsm" firstAttribute="top" secondItem="lQU-mC-Ukm" secondAttribute="top" constant="23" id="KrD-V1-ruK"/>
+                                    <constraint firstItem="oR8-Fu-dsm" firstAttribute="top" secondItem="lQU-mC-Ukm" secondAttribute="top" constant="67" id="KrD-V1-ruK"/>
                                     <constraint firstItem="ULD-Kn-Yc6" firstAttribute="centerY" secondItem="tb1-gh-I1Z" secondAttribute="centerY" id="Kuc-Vf-c91"/>
                                     <constraint firstItem="oR8-Fu-dsm" firstAttribute="leading" secondItem="ULD-Kn-Yc6" secondAttribute="leading" id="L6C-5H-pL3"/>
                                     <constraint firstItem="WmF-Zi-hrj" firstAttribute="bottom" secondItem="lQU-mC-Ukm" secondAttribute="bottomMargin" id="LSo-T0-dDu"/>
@@ -1016,13 +1001,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="s3d-lp-KpJ" firstAttribute="centerX" secondItem="lQU-mC-Ukm" secondAttribute="centerX" id="1zl-la-FdA"/>
-                            <constraint firstItem="s3d-lp-KpJ" firstAttribute="leading" secondItem="K7b-gE-nft" secondAttribute="leading" id="CEi-en-Wjs"/>
+                            <constraint firstItem="lQU-mC-Ukm" firstAttribute="top" secondItem="IW9-AY-tNb" secondAttribute="bottom" id="KSU-An-CzK"/>
+                            <constraint firstItem="lQU-mC-Ukm" firstAttribute="centerX" secondItem="K7b-gE-nft" secondAttribute="centerX" id="eGO-Ql-B5z"/>
+                            <constraint firstItem="lQU-mC-Ukm" firstAttribute="leading" secondItem="K7b-gE-nft" secondAttribute="leading" id="h1a-CS-c1n"/>
                             <constraint firstItem="lQU-mC-Ukm" firstAttribute="bottom" secondItem="BfJ-Gw-A5R" secondAttribute="top" id="iJG-5j-MNE"/>
-                            <constraint firstItem="lQU-mC-Ukm" firstAttribute="top" secondItem="s3d-lp-KpJ" secondAttribute="bottom" id="q7l-nf-rBb"/>
-                            <constraint firstAttribute="trailing" secondItem="s3d-lp-KpJ" secondAttribute="trailing" id="rmi-FR-kQi"/>
-                            <constraint firstItem="s3d-lp-KpJ" firstAttribute="top" secondItem="IW9-AY-tNb" secondAttribute="bottom" id="vbf-LT-KPG"/>
-                            <constraint firstItem="lQU-mC-Ukm" firstAttribute="leading" secondItem="s3d-lp-KpJ" secondAttribute="leading" id="xcj-AW-D9Y"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

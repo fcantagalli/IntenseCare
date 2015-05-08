@@ -129,6 +129,11 @@ class InsertHospital:UIViewController, UITextFieldDelegate {
             attributes:[NSForegroundColorAttributeName: myWhite])
         
         //CODE HERE
+        
+        self.navigationItem.title = "Insert Hospital"
+        var barbuttonback = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        barbuttonback.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: UIBarMetrics.Default)
+        self.navigationItem.backBarButtonItem = barbuttonback
     }
     
     override func didReceiveMemoryWarning() {
