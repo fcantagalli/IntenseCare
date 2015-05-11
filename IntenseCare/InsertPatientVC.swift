@@ -100,6 +100,13 @@ class InsertPatientCV:UIViewController,UITextFieldDelegate {
         
         var result = WebServiceResource.getWebContent(WebServiceResource.INSERT_PATIENT, postVariables: postParam)
         println(result)
+        
+        if (result["error"].string == nil) {
+            var alert = UIAlertController(title: "Patient Inserted Successfully", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            var action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -123,6 +130,12 @@ class InsertPatientCV:UIViewController,UITextFieldDelegate {
         touch.cancelsTouchesInView = false
         scrollView.addGestureRecognizer(touch)
 
+        self.navigationItem.title = "Insert Patient"
+        var barbuttonback = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        barbuttonback.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: UIBarMetrics.Default)
+        self.navigationItem.backBarButtonItem = barbuttonback
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
+        
         // CODE HERE
     }
     

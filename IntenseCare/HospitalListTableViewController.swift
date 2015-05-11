@@ -22,6 +22,7 @@ class HospitalList:UIViewController, UITableViewDelegate   {
     }
     
     var tableContent:JSON!
+    var staticContent = ["Sírio Libanes", "Santa Catarina", "Sepaco"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class HospitalList:UIViewController, UITableViewDelegate   {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        tableContent = WebServiceResource.getWebContent(WebServiceResource.GET_HOSPITALS, postVariables: nil)
+        // tableContent = WebServiceResource.getWebContent(WebServiceResource.GET_HOSPITALS, postVariables: nil)
         
         //hospitalTV.reloadData()
     }
@@ -42,14 +43,15 @@ class HospitalList:UIViewController, UITableViewDelegate   {
     }
     
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return staticContent.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("HospitalCell") as! UITableViewCell
 
-        cell.textLabel?.text = tableContent[indexPath.row]["name"].stringValue
+        //cell.textLabel?.text = tableContent[indexPath.row]["name"].stringValue
+        cell.textLabel?.text = staticContent[indexPath.row]
         
         return cell
     }

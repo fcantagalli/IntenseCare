@@ -100,6 +100,13 @@ class InsertHospital:UIViewController, UITextFieldDelegate {
         
         var result = WebServiceResource.getWebContent(WebServiceResource.INSERT_HOSPITAL, postVariables: postParam)
         println(result)
+        
+        if (result["error"].string == nil) {
+            var alert = UIAlertController(title: "Hospital Inserted Successfully", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            var action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
     

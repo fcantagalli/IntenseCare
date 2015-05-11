@@ -247,7 +247,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rlJ-eg-aM3">
             <objects>
-                <navigationController id="Cdk-LQ-uTR" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="Cdk-LQ-uTR" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YBU-Td-eti">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -270,9 +270,9 @@
         <!--Navigation Controller-->
         <scene sceneID="3Ls-wj-PsJ">
             <objects>
-                <navigationController id="8zB-5c-YNT" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="8zB-5c-YNT" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ATJ-h3-DRT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ATJ-h3-DRT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -356,13 +356,13 @@
                         <viewControllerLayoutGuide type="bottom" id="5B4-6F-VfO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3V4-zs-mOo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="05n-64-pN6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="hospitalList" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HospitalCell" textLabel="1so-44-8AN" style="IBUITableViewCellStyleDefault" id="6hb-FA-PfN">
@@ -396,7 +396,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Hospitals" id="Qnj-YE-beG">
