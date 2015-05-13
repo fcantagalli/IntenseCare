@@ -8,12 +8,18 @@
 
 import Foundation
 import UIKit
-
+    
+    struct AppColors {
+        static var barColor = UIColorFromHex("3DC8AB", 1.0)
+    }
+    
         struct WebServiceResource {
             static let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
             static let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
             static let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
             static let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
+            static let UPDATE_PATIENT_STATUS = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateStatus"
+            static let UPDATE_PATIENT_BED = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateBed"
             
             static func getWebContent(method:String, postVariables:String?) -> JSON {
                 

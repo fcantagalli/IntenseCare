@@ -11,6 +11,7 @@ import Foundation
 class ConsultationViewController: UIViewController, UITextFieldDelegate {
     
     //OUTLETS AND ACTIONS
+    @IBOutlet weak var navItem: UINavigationItem!
     
         //Respiratory System
     @IBOutlet weak var FIO2TF: UITextField!
@@ -25,6 +26,7 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var glasgowTF: UITextField!
     @IBAction func NervousSaveButton(sender: AnyObject) {
         // save here
+        
     }
     
         //Liver
@@ -51,12 +53,18 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var urineTF: UITextField!
     @IBAction func renalSaveButton(sender: UIButton) {
         // save here
+        
+        
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var tabController = self.tabBarController as! ConsultationTabsController
+        
+        self.parentViewController?.navigationItem.title = tabController.patientName
+        self.parentViewController?.navigationController?.navigationBar.barTintColor = tabController.barColor
+        self.parentViewController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func didReceiveMemoryWarning() {

@@ -26,8 +26,10 @@ class CellPatientTableViewCell: UITableViewCell {
         let consultation = UIAlertAction(title: "Do consultation", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("consultation")
             var storyboard = UIStoryboard(name: "Consultation", bundle: nil)
-            var viewController:UITabBarController = storyboard.instantiateViewControllerWithIdentifier("Consultation") as! UITabBarController
-            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+            let tabViewController:ConsultationTabsController = storyboard.instantiateViewControllerWithIdentifier("Consultation") as! ConsultationTabsController
+            tabViewController.patientName = self.patientName.text!
+            tabViewController.barColor = self.contentView.backgroundColor
+            self.viewController?.showViewController(tabViewController, sender: self.viewController)
         }
         let history = UIAlertAction(title: "Change bed", style: UIAlertActionStyle.Default) { (alert) -> Void in
             println("history")
@@ -47,9 +49,10 @@ class CellPatientTableViewCell: UITableViewCell {
         viewController?.presentViewController(alert, animated: true, completion: nil)
 
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

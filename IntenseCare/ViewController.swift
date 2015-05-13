@@ -108,5 +108,9 @@ class ViewController: UIViewController, UITableViewDelegate {
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = AppColors.barColor
+        super.viewWillAppear(animated)
+    }
 }
 

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        /*
         var storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("password1") != nil) { // if the is no preference saved, call Sign up screen
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = viewController;
             self.window?.makeKeyAndVisible()
         }
-        
+        */
         return true
     }
 
