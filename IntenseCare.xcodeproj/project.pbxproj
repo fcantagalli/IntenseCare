@@ -17,6 +17,7 @@
 		5512D1131AB4C85E00F2FF4B /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */; };
 		5512D1141AB4C85E00F2FF4B /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */; };
 		5512D1151AB4C85E00F2FF4B /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */; };
+		551673C21B0EAA21006C616E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551673C11B0EAA21006C616E /* ProfileViewController.swift */; };
 		5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5520A5501AD763EE004ABAE4 /* GenericViewController.swift */; };
 		55639BEF1AD4BB5A00BE54B1 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55639BEE1AD4BB5A00BE54B1 /* SWRevealViewController.m */; };
 		55639BF11AD4BBBE00BE54B1 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */; };
@@ -26,6 +27,8 @@
 		55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */; };
 		55C4B4E51AFA527000DCA590 /* ConsultationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B4E41AFA527000DCA590 /* ConsultationVC.swift */; };
 		55D371A31B01896300AD777B /* ConsultatonTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D371A21B01896300AD777B /* ConsultatonTabsController.swift */; };
+		55D41BA11B110F3200A3024A /* CellHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41BA01B110F3200A3024A /* CellHomeTableViewCell.swift */; };
+		55D41BA31B11115300A3024A /* UrgentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41BA21B11115300A3024A /* UrgentList.swift */; };
 		55E3D7D21AF9546E009C8BA3 /* Consultation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */; };
 		55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */; };
 		55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */; };
@@ -102,6 +105,7 @@
 		5512D10A1AB4C85E00F2FF4B /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
 		5512D10B1AB4C85E00F2FF4B /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		5512D10C1AB4C85E00F2FF4B /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
+		551673C11B0EAA21006C616E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5520A5501AD763EE004ABAE4 /* GenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		55639BED1AD4BB5A00BE54B1 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		55639BEE1AD4BB5A00BE54B1 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55C4B4E41AFA527000DCA590 /* ConsultationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultationVC.swift; sourceTree = "<group>"; };
 		55D371A21B01896300AD777B /* ConsultatonTabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultatonTabsController.swift; sourceTree = "<group>"; };
+		55D41BA01B110F3200A3024A /* CellHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHomeTableViewCell.swift; sourceTree = "<group>"; };
+		55D41BA21B11115300A3024A /* UrgentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrgentList.swift; sourceTree = "<group>"; };
 		55D4970F1AD01CA000BB4039 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consultation.storyboard; sourceTree = "<group>"; };
 		55E3D7D51AF9552D009C8BA3 /* CustomTextBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextBackground.swift; sourceTree = "<group>"; };
@@ -124,7 +130,7 @@
 		55FA00341AF95B1F00EC67D5 /* MyCustomViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewTests.swift; sourceTree = "<group>"; };
 		55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertHospitalVC.swift; sourceTree = "<group>"; };
 		55FBE1D81AB489FE00655C61 /* IntenseCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntenseCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FBE1DC1AB489FE00655C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = IntenseCare/Info.plist; sourceTree = "<group>"; };
 		55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		55FBE1E21AB489FE00655C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				55FBE1DA1AB489FE00655C61 /* IntenseCare */,
+				55FBE1DC1AB489FE00655C61 /* Info.plist */,
 				55FBE1F01AB489FE00655C61 /* IntenseCareTests */,
 				55FA00221AF95B1F00EC67D5 /* MyCustomView */,
 				55FA00311AF95B1F00EC67D5 /* MyCustomViewTests */,
@@ -264,28 +271,31 @@
 		55FBE1DA1AB489FE00655C61 /* IntenseCare */ = {
 			isa = PBXGroup;
 			children = (
+				55FBE2031AB48FFE00655C61 /* External Module */,
+				55C4B4E31AFA51FD00DCA590 /* Consultation Tabs */,
 				55005D051AF9501D000499A6 /* CustomViews */,
 				5512D1031AB4C84500F2FF4B /* Resource */,
-				55FBE2031AB48FFE00655C61 /* External Module */,
 				55FBE1DD1AB489FE00655C61 /* AppDelegate.swift */,
-				559D266B1ACF06C1000F70CF /* ViewController.swift */,
-				55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */,
-				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
-				550C622E1ACF77A900DF58BB /* Resource.swift */,
+				55D41BA01B110F3200A3024A /* CellHomeTableViewCell.swift */,
 				7BA4D11E1ABF15E800CB1693 /* CellPatientTableViewCell.swift */,
-				55C4B4E31AFA51FD00DCA590 /* Consultation Tabs */,
-				55639BF21AD4BD6B00BE54B1 /* MenuController.swift */,
-				55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */,
 				5520A5501AD763EE004ABAE4 /* GenericViewController.swift */,
+				55F765A71AEC34A80054AE31 /* HospitalListTableViewController.swift */,
 				55B03DB11AEDC34200ACF932 /* InsertPatientVC.swift */,
 				55FB1CA71AF8EAAD0042405D /* InsertHospitalVC.swift */,
+				55C0D37B1ABBA3A30087B393 /* LoginViewController.swift */,
+				55639BF21AD4BD6B00BE54B1 /* MenuController.swift */,
+				55FBE1DF1AB489FE00655C61 /* SignInViewController.swift */,
+				551673C11B0EAA21006C616E /* ProfileViewController.swift */,
+				55FBE1DB1AB489FE00655C61 /* Supporting Files */,
+				550C622E1ACF77A900DF58BB /* Resource.swift */,
+				55D41BA21B11115300A3024A /* UrgentList.swift */,
+				559D266B1ACF06C1000F70CF /* ViewController.swift */,
 				55FBE1E11AB489FE00655C61 /* Main.storyboard */,
 				55639BF01AD4BBBE00BE54B1 /* SideMenu.storyboard */,
 				55E3D7D11AF9546E009C8BA3 /* Consultation.storyboard */,
 				7BA4D11A1ABF132900CB1693 /* BihStoryboard.storyboard */,
 				55FBE1E41AB489FE00655C61 /* Images.xcassets */,
 				55FBE1E61AB489FE00655C61 /* LaunchScreen.xib */,
-				55FBE1DB1AB489FE00655C61 /* Supporting Files */,
 				55D4970F1AD01CA000BB4039 /* Bridging-Header.h */,
 			);
 			path = IntenseCare;
@@ -294,7 +304,6 @@
 		55FBE1DB1AB489FE00655C61 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55FBE1DC1AB489FE00655C61 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -528,17 +537,20 @@
 			files = (
 				559D266C1ACF06C1000F70CF /* ViewController.swift in Sources */,
 				55E3D7D61AF9552D009C8BA3 /* CustomTextBackground.swift in Sources */,
+				55D41BA31B11115300A3024A /* UrgentList.swift in Sources */,
 				55D371A31B01896300AD777B /* ConsultatonTabsController.swift in Sources */,
 				55C4B4E51AFA527000DCA590 /* ConsultationVC.swift in Sources */,
 				55639BF31AD4BD6B00BE54B1 /* MenuController.swift in Sources */,
 				5520A5511AD763EE004ABAE4 /* GenericViewController.swift in Sources */,
 				55F765A81AEC34A80054AE31 /* HospitalListTableViewController.swift in Sources */,
+				551673C21B0EAA21006C616E /* ProfileViewController.swift in Sources */,
 				55C0D37C1ABBA3A30087B393 /* LoginViewController.swift in Sources */,
 				55FBE2021AB48FEB00655C61 /* SwiftyJSON.swift in Sources */,
 				55639BEF1AD4BB5A00BE54B1 /* SWRevealViewController.m in Sources */,
 				55FB1CA81AF8EAAD0042405D /* InsertHospitalVC.swift in Sources */,
 				55B03DB21AEDC34200ACF932 /* InsertPatientVC.swift in Sources */,
 				55FBE1E01AB489FE00655C61 /* SignInViewController.swift in Sources */,
+				55D41BA11B110F3200A3024A /* CellHomeTableViewCell.swift in Sources */,
 				7BA4D11F1ABF15E800CB1693 /* CellPatientTableViewCell.swift in Sources */,
 				55FBE1DE1AB489FE00655C61 /* AppDelegate.swift in Sources */,
 				550C622F1ACF77A900DF58BB /* Resource.swift in Sources */,

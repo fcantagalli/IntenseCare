@@ -98,15 +98,25 @@ class InsertPatientCV:UIViewController,UITextFieldDelegate {
         }
         println(postParam)
         
-        var result = WebServiceResource.getWebContent(WebServiceResource.INSERT_PATIENT, postVariables: postParam)
-        println(result)
+        var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        view.addSubview(actInd)
+        var webService = WebServiceResource.webService
         
-        if (result["error"].string == nil) {
-            var alert = UIAlertController(title: "Patient Inserted Successfully", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-            var action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-            alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+        webService.getWebContent(webService.INSERT_PATIENT, postVariables: postParam)
+        dispatch_group_notify(webService.serviceGroup, dispatch_get_main_queue()) { () -> Void in
+            var result = webService.result!;
+            if result["error"] == nil {
+                var alert = UIAlertController(title: "Patient Inserted Successfully", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+                var action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            actInd.stopAnimating()
         }
+        
     }
     
     override func viewDidLoad() {

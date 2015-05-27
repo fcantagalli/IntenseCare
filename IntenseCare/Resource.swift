@@ -13,15 +13,26 @@ import UIKit
         static var barColor = UIColorFromHex("3DC8AB", 1.0)
     }
     
-        struct WebServiceResource {
-            static let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
-            static let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
-            static let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
-            static let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
-            static let UPDATE_PATIENT_STATUS = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateStatus"
-            static let UPDATE_PATIENT_BED = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateBed"
+        class WebServiceResource {
             
-            static func getWebContent(method:String, postVariables:String?) -> JSON {
+            let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
+            let INSERT_PATIENT = "http://bianca.letti.com.br/IntenseCare/patient.php?method=insertPatient"
+            let GET_HOSPITALS = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=getHospitalList"
+            let INSERT_HOSPITAL = "http://bianca.letti.com.br/IntenseCare/hospital.php?method=insertHospital"
+            let UPDATE_PATIENT_STATUS = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateStatus"
+            let UPDATE_PATIENT_BED = "http://bianca.letti.com.br/IntenseCare/patient.php?method=updateBed"
+            let INSERT_USER = "http://bianca.letti.com.br/IntenseCare/user.php?method=insertUser"
+            let ALTER_PASSWORD = "http://bianca.letti.com.br/IntenseCare/user.php?method=alterPassword"
+            let UPDATE_USER = "http://bianca.letti.com.br/IntenseCare/user.php?method=updateUser"
+            let GET_USER_INFO = "http://bianca.letti.com.br/IntenseCare/user.php?method=getUser"
+            
+            let serviceGroup:dispatch_group_t = dispatch_group_create()
+            
+            var result:JSON? = nil
+            
+            static let webService:WebServiceResource = WebServiceResource()
+            
+            func getWebContent(method:String, postVariables:String?) {
                 
                 //URL request
                 var url = NSURL(string:method)
@@ -50,21 +61,19 @@ import UIKit
                         var jsonaux:JSON = JSON(data: data)
                         println(jsonaux)
                         
-                        json =  jsonaux;
+                        self.result = jsonaux;
                     }
                     else{
                         println("passou 5")
+                        self.result = JSON(["erro" : error ])
                         println(error)
                     }
-                    dispatch_group_leave(group)
+                    dispatch_group_leave(self.serviceGroup)
                     
                 }
                 
-                dispatch_group_enter(group)
+                dispatch_group_enter(self.serviceGroup)
                 task.resume()
-                dispatch_group_wait(group, DISPATCH_TIME_FOREVER)
-                
-                return json!;
             }
     }
     

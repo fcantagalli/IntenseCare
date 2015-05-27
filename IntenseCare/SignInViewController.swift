@@ -19,6 +19,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     // HERE INSIDE GOES THE CODE TO DO SOMETHING WITH THE BUTTON
     @IBAction func buttonSave(sender: UIButton) {
         // revify password
+        if tfName.text == "" {
+            let alert = UIAlertController(title: "Name is Empty", message: "Please, insert your name." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return;
+        }
+        if tfemail.text == "" {
+            let alert = UIAlertController(title: "E-mail is Empty", message: "Please, insert you e-mail" , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return;
+        }
         if count(tfPassword.text) < 4 {
             let alert = UIAlertController(title: "Password too short", message: "Enter a 4 PIN password on the first password field" , preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -48,17 +60,43 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         let pass2sha = sha256(pass2Data!)
         println(pass2sha)
         
-        NSUserDefaults.standardUserDefaults().setObject(pass1sha, forKey: "password1")
-        NSUserDefaults.standardUserDefaults().setObject(pass2sha, forKey: "password2")
-        NSUserDefaults.standardUserDefaults().setObject(tfName.text, forKey: "name")
-        NSUserDefaults.standardUserDefaults().setObject(tfemail.text, forKey: "email")
+        var postParam = "name=\(tfName.text)&email=\(tfemail.text)&password=\(pass1sha)&password2=\(pass2sha)&type=1"
         
-        var storyboard:UIStoryboard = self.storyboard!
+        var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        view.addSubview(actInd)
+        var webService = WebServiceResource.webService
+        webService.getWebContent(webService.INSERT_USER, postVariables: postParam)
         
-        var viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
-        self.presentViewController(viewController, animated: true, completion: nil)
-        //sender.window?.rootViewController = viewController;
-        //sender.window?.makeKeyAndVisible()
+        dispatch_group_notify(webService.serviceGroup, dispatch_get_main_queue()) { () -> Void in
+            // do somenthing
+            var result = webService.result!
+            if result["id"] != nil {
+                NSUserDefaults.standardUserDefaults().setObject(pass1sha, forKey: "password1")
+                NSUserDefaults.standardUserDefaults().setObject(pass2sha, forKey: "password2")
+                NSUserDefaults.standardUserDefaults().setObject(self.tfName.text, forKey: "name")
+                NSUserDefaults.standardUserDefaults().setObject(self.tfemail.text, forKey: "email")
+                var id = result["id"].intValue
+                NSUserDefaults.standardUserDefaults().setObject(id, forKey: "userId")
+                
+                var storyboard:UIStoryboard = self.storyboard!
+                
+                var viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
+                self.presentViewController(viewController, animated: true, completion: nil)
+                //sender.window?.rootViewController = viewController;
+                //sender.window?.makeKeyAndVisible()
+            }
+            else{
+                let alert = UIAlertController(title: "Unable to save user information", message: "I'm sorry, but we werent able to save your information" , preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                return;
+            }
+            actInd.stopAnimating()
+        }
+        
     }
     
     override func viewDidLoad() {
