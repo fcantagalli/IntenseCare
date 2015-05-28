@@ -15,6 +15,10 @@
             <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -113,7 +117,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nervous" id="1tF-rg-1Bj"/>
+                    <tabBarItem key="tabBarItem" title="Nervous" image="Brain" selectedImage="Brain" id="1tF-rg-1Bj"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bilirubinTF" destination="ICk-gG-wLG" id="hfi-xy-7VU"/>
@@ -133,117 +137,238 @@
                         <viewControllerLayoutGuide type="bottom" id="uL2-vJ-2zO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gBO-MU-dvf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-6v-SXB">
-                                <rect key="frame" x="16" y="123" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laS-ur-2tG" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="152" width="288" height="50"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Vy-5bS">
+                                <rect key="frame" x="0.0" y="63" width="320" height="788"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-bW-us2">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vasopressors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Y8-ipg">
-                                <rect key="frame" x="16" y="239" width="207" height="26"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-kG-HS7">
-                                <rect key="frame" x="0.0" y="63" width="320" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cardio Vascular System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-83-ZFp">
-                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-6v-SXB">
+                                        <rect key="frame" x="16" y="60" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-Vb-MNy">
-                                <rect key="frame" x="0.0" y="294" width="320" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coagulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFl-hJ-iNg">
-                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-kG-HS7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cardio Vascular System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-83-ZFp">
+                                                <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-Vb-MNy">
+                                        <rect key="frame" x="0.0" y="551" width="320" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coagulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFl-hJ-iNg">
+                                                <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-ho-XxW">
+                                        <rect key="frame" x="255" y="154" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-vs-GD2" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="703" width="93" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-kk-XlK">
+                                                <rect key="frame" x="27" y="15" width="39" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vasopressors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Y8-ipg">
+                                        <rect key="frame" x="16" y="154" width="207" height="26"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-dV-VVS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="382" width="288" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alg-dw-V9E">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32f-jR-nDZ">
-                                <rect key="frame" x="16" y="353" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-ho-XxW">
-                                <rect key="frame" x="249" y="236" width="51" height="31"/>
-                                <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </switch>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-vs-GD2" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="114" y="447" width="93" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-kk-XlK">
-                                        <rect key="frame" x="27" y="15" width="39" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32f-jR-nDZ">
+                                        <rect key="frame" x="16" y="603" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-dV-VVS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="89" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-bW-us2">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWP-h0-o67">
+                                        <rect key="frame" x="16" y="188" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFy-na-rBD" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="217" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cp0-rP-Ict">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNC-fo-VP8">
+                                        <rect key="frame" x="16" y="275" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-oM-LvS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="304" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-nx-2Bj">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EPI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COY-TS-PQW">
+                                        <rect key="frame" x="16" y="362" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-xu-b5T" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="391" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-RY-OzG">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-EF-nv6">
+                                        <rect key="frame" x="16" y="446" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-3y-NUd" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="475" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-6M-Ejs">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laS-ur-2tG" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="632" width="288" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alg-dw-V9E">
+                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="11"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="keyPath">
+                                        <size key="value" width="320" height="900"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cardio" id="aD5-AT-CAk"/>
+                    <tabBarItem key="tabBarItem" title="Cardio" image="Hearth" id="aD5-AT-CAk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="dobTF" destination="IAY-nx-2Bj" id="Y9L-RA-Z8K"/>
+                        <outlet property="dopTF" destination="cp0-rP-Ict" id="jfv-XY-8Zb"/>
+                        <outlet property="epiTF" destination="6JU-RY-OzG" id="ViK-rN-FZX"/>
                         <outlet property="mapTF" destination="bkp-bW-us2" id="8h3-5Q-Z3L"/>
+                        <outlet property="norTF" destination="rb0-6M-Ejs" id="mHF-8v-L1I"/>
                         <outlet property="plateletsTF" destination="alg-dw-V9E" id="ZEc-jX-uaa"/>
                         <outlet property="vasopressorsSwitch" destination="wTC-ho-XxW" id="BDP-KM-ub7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfS-iF-F4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="1412"/>
+            <point key="canvasLocation" x="933" y="1553"/>
         </scene>
         <!--Renal-->
         <scene sceneID="D8E-rA-Lbh">
@@ -328,7 +453,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Renal" id="HM5-uB-Zed"/>
+                    <tabBarItem key="tabBarItem" title="Renal" image="Renal" id="HM5-uB-Zed"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="creatinineTF" destination="nBG-0r-CJI" id="IbR-uz-hc7"/>
@@ -433,7 +558,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Respiratory" id="Yeh-BE-K7m"/>
+                    <tabBarItem key="tabBarItem" title="Respiratory" image="Lungs" selectedImage="Lungs" id="Yeh-BE-K7m"/>
                     <navigationItem key="navigationItem" title="BlaBla" id="3mq-jx-VEe"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -474,4 +599,10 @@
             <point key="canvasLocation" x="85" y="445"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Brain" width="24" height="24"/>
+        <image name="Hearth" width="24" height="24"/>
+        <image name="Lungs" width="24" height="24"/>
+        <image name="Renal" width="24" height="24"/>
+    </resources>
 </document>

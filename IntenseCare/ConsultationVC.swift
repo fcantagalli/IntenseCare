@@ -38,6 +38,11 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
         // cardio vascular system
     @IBOutlet weak var mapTF: UITextField!
     @IBOutlet weak var vasopressorsSwitch: UISwitch!
+    @IBOutlet weak var dopTF: UITextField!
+    @IBOutlet weak var dobTF: UITextField!
+    @IBOutlet weak var epiTF: UITextField!
+    @IBOutlet weak var norTF: UITextField!
+    
     @IBAction func CardioSaveButton(sender: AnyObject) {
         //save here
     }
@@ -80,4 +85,5 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
 }

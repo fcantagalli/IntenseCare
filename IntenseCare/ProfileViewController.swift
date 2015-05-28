@@ -212,6 +212,11 @@ class ProfileViewController:UIViewController, UITextFieldDelegate{
         var userId = NSUserDefaults.standardUserDefaults().objectForKey("userId") as! Int
         var webService = WebServiceResource.webService
         var postParam = "user_id=\(userId)"
+        var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        self.view.addSubview(actInd)
         webService.getWebContent(webService.GET_USER_INFO, postVariables: postParam)
         dispatch_group_notify(webService.serviceGroup, dispatch_get_main_queue()) { () -> Void in
             // load info about user
@@ -225,6 +230,8 @@ class ProfileViewController:UIViewController, UITextFieldDelegate{
                 self.specialty.text = result["specialty"].stringValue
                 self.phoneTF.text = result["phone"].stringValue
             }
+            
+            actInd.stopAnimating()
         }
     }
     
