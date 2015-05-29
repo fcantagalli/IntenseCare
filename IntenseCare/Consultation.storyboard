@@ -2,9 +2,27 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YDX-Xk-OzD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+        </mutableArray>
         <mutableArray key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
@@ -34,93 +52,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glasgow coma score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-pc-ZPv">
-                                <rect key="frame" x="16" y="111" width="179" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dub-F0-jvr" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="317" width="288" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg/dL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ICk-gG-wLG">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bilirubin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTp-1U-6kz">
-                                <rect key="frame" x="16" y="288" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-SQ-SRO">
-                                <rect key="frame" x="0.0" y="222" width="320" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-YZ-YPo">
-                                        <rect key="frame" x="90" y="0.0" width="140" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-Md-UO1">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-Md-UO1" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nervous System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkM-oW-xBp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nervous System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkM-oW-xBp">
                                         <rect key="frame" x="90" y="0.0" width="140" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CB-TL-s3r" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="9o3-B0-C8i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="NervousSaveButton:" destination="WiJ-bl-2jj" eventType="touchUpInside" id="wsO-EN-fib"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-0b-Q58" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="140" width="288" height="49"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="number 0 - 14" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4GU-mk-x1H">
-                                        <rect key="frame" x="13" y="10" width="267" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppI-6U-HtR" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="113" y="411" width="93" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIy-XZ-PVv">
-                                        <rect key="frame" x="27" y="15" width="39" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pkM-oW-xBp" firstAttribute="centerX" secondItem="dKz-Md-UO1" secondAttribute="centerX" id="17X-dg-24x"/>
+                                    <constraint firstItem="9CB-TL-s3r" firstAttribute="trailing" secondItem="dKz-Md-UO1" secondAttribute="trailingMargin" id="7v7-5G-jmT"/>
+                                    <constraint firstItem="9CB-TL-s3r" firstAttribute="top" secondItem="dKz-Md-UO1" secondAttribute="top" constant="7" id="Cow-lI-t1Z"/>
+                                    <constraint firstItem="9CB-TL-s3r" firstAttribute="leading" secondItem="pkM-oW-xBp" secondAttribute="trailing" constant="36" id="JCV-UA-aVQ"/>
+                                    <constraint firstItem="pkM-oW-xBp" firstAttribute="top" secondItem="dKz-Md-UO1" secondAttribute="top" id="PP3-mF-wvh"/>
+                                    <constraint firstItem="pkM-oW-xBp" firstAttribute="centerY" secondItem="9CB-TL-s3r" secondAttribute="centerY" id="zbp-dM-27V"/>
+                                    <constraint firstItem="9CB-TL-s3r" firstAttribute="centerY" secondItem="dKz-Md-UO1" secondAttribute="centerY" id="zrS-sx-tS6"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="11"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-0b-Q58" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="288" height="49"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="number 0 - 14" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4GU-mk-x1H">
+                                        <rect key="frame" x="13" y="10" width="267" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4GU-mk-x1H" firstAttribute="leading" secondItem="eXx-0b-Q58" secondAttribute="leading" constant="13" id="FHF-5e-1rA"/>
+                                    <constraint firstAttribute="bottom" secondItem="4GU-mk-x1H" secondAttribute="bottom" constant="9" id="WVa-R1-Vk8"/>
+                                    <constraint firstItem="4GU-mk-x1H" firstAttribute="trailing" secondItem="eXx-0b-Q58" secondAttribute="trailingMargin" id="ySj-Fb-IcZ"/>
+                                    <constraint firstItem="4GU-mk-x1H" firstAttribute="top" secondItem="eXx-0b-Q58" secondAttribute="top" constant="10" id="zSj-Zm-bg0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glasgow coma score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-pc-ZPv">
+                                <rect key="frame" x="16" y="127" width="179" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="XMF-qF-VdN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kep-0G-YcY" firstAttribute="top" secondItem="eXx-0b-Q58" secondAttribute="bottom" constant="314" id="2fj-8F-aTf"/>
+                            <constraint firstItem="BtP-pc-ZPv" firstAttribute="top" secondItem="RVa-Ge-FaY" secondAttribute="top" constant="127" id="BPG-px-mhK"/>
+                            <constraint firstItem="dKz-Md-UO1" firstAttribute="leading" secondItem="RVa-Ge-FaY" secondAttribute="leading" id="T77-Bn-1dC"/>
+                            <constraint firstItem="BtP-pc-ZPv" firstAttribute="top" secondItem="dKz-Md-UO1" secondAttribute="bottom" constant="19" id="VdL-AZ-5DI"/>
+                            <constraint firstItem="eXx-0b-Q58" firstAttribute="top" secondItem="BtP-pc-ZPv" secondAttribute="bottom" constant="8" symbolic="YES" id="Vpt-Bp-6tD"/>
+                            <constraint firstItem="dKz-Md-UO1" firstAttribute="top" secondItem="NT0-Yw-FTB" secondAttribute="bottom" constant="44" id="c0b-T7-Dtf"/>
+                            <constraint firstItem="BtP-pc-ZPv" firstAttribute="leading" secondItem="RVa-Ge-FaY" secondAttribute="leadingMargin" id="eDc-Le-4gR"/>
+                            <constraint firstItem="BtP-pc-ZPv" firstAttribute="leading" secondItem="eXx-0b-Q58" secondAttribute="leading" id="jIz-EK-s9t"/>
+                            <constraint firstItem="dKz-Md-UO1" firstAttribute="centerX" secondItem="eXx-0b-Q58" secondAttribute="centerX" id="y1F-Ef-wk0"/>
+                            <constraint firstAttribute="trailing" secondItem="dKz-Md-UO1" secondAttribute="trailing" id="zev-Nw-1LP"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nervous" image="Brain" selectedImage="Brain" id="1tF-rg-1Bj"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Nervous" image="Brain" id="1tF-rg-1Bj"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="bilirubinTF" destination="ICk-gG-wLG" id="hfi-xy-7VU"/>
                         <outlet property="glasgowTF" destination="4GU-mk-x1H" id="NM4-p6-A3C"/>
                     </connections>
                 </viewController>
@@ -137,238 +178,314 @@
                         <viewControllerLayoutGuide type="bottom" id="uL2-vJ-2zO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gBO-MU-dvf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="657"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Vy-5bS">
-                                <rect key="frame" x="0.0" y="63" width="320" height="788"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="PCD-Vy-5bS">
+                                <rect key="frame" x="0.0" y="63" width="320" height="545"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-6v-SXB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-6v-SXB">
                                         <rect key="frame" x="16" y="60" width="124" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="124" id="Smh-Lk-KbE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-kG-HS7">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-kG-HS7" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cardio Vascular System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-83-ZFp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardio Vascular System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-83-ZFp">
                                                 <rect key="frame" x="63" y="0.0" width="183" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifV-bs-rUU" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                                <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="46" id="fTy-BF-89f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.59999999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="CardioSaveButton:" destination="ANk-eK-KFu" eventType="touchUpInside" id="p0O-DM-dDk"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ZVK-83-ZFp" firstAttribute="leading" secondItem="3Ey-kG-HS7" secondAttribute="leading" constant="63" id="6Kp-yR-uUE"/>
+                                            <constraint firstItem="ZVK-83-ZFp" firstAttribute="top" secondItem="3Ey-kG-HS7" secondAttribute="top" id="9vZ-7C-9yg"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZVK-83-ZFp" secondAttribute="bottom" id="ASl-38-lmL"/>
+                                            <constraint firstItem="ifV-bs-rUU" firstAttribute="trailing" secondItem="3Ey-kG-HS7" secondAttribute="trailingMargin" id="Lcp-dg-sKB"/>
+                                            <constraint firstItem="ifV-bs-rUU" firstAttribute="leading" secondItem="ZVK-83-ZFp" secondAttribute="trailing" constant="20" id="V1S-Te-JWU"/>
+                                            <constraint firstItem="ifV-bs-rUU" firstAttribute="top" secondItem="3Ey-kG-HS7" secondAttribute="top" constant="7" id="duq-xR-R6S"/>
+                                            <constraint firstAttribute="height" constant="44" id="qiZ-be-Tg0"/>
+                                            <constraint firstItem="ZVK-83-ZFp" firstAttribute="centerY" secondItem="ifV-bs-rUU" secondAttribute="centerY" id="rcm-gS-dc3"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-Vb-MNy">
-                                        <rect key="frame" x="0.0" y="551" width="320" height="44"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coagulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFl-hJ-iNg">
-                                                <rect key="frame" x="63" y="0.0" width="183" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-ho-XxW">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-ho-XxW">
                                         <rect key="frame" x="255" y="154" width="51" height="31"/>
                                         <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </switch>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-vs-GD2" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="703" width="93" height="52"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-kk-XlK">
-                                                <rect key="frame" x="27" y="15" width="39" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="11"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vasopressors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Y8-ipg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vasopressors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Y8-ipg">
                                         <rect key="frame" x="16" y="154" width="207" height="26"/>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32f-jR-nDZ">
-                                        <rect key="frame" x="16" y="603" width="124" height="21"/>
-                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-dV-VVS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-dV-VVS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="16" y="89" width="288" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-bW-us2">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-bW-us2">
                                                 <rect key="frame" x="8" y="10" width="272" height="30"/>
                                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bkp-bW-us2" firstAttribute="leading" secondItem="ypE-dV-VVS" secondAttribute="leadingMargin" id="Fyx-0D-jZf"/>
+                                            <constraint firstItem="bkp-bW-us2" firstAttribute="top" secondItem="ypE-dV-VVS" secondAttribute="top" constant="10" id="UAu-xN-Sk8"/>
+                                            <constraint firstItem="bkp-bW-us2" firstAttribute="trailing" secondItem="ypE-dV-VVS" secondAttribute="trailingMargin" id="YXh-TP-vPB"/>
+                                            <constraint firstItem="bkp-bW-us2" firstAttribute="centerY" secondItem="ypE-dV-VVS" secondAttribute="centerY" id="by7-Xo-eyE"/>
+                                            <constraint firstAttribute="height" constant="50" id="uDd-te-3bJ"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWP-h0-o67">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWP-h0-o67">
                                         <rect key="frame" x="16" y="188" width="124" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="y0L-1B-9gQ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFy-na-rBD" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFy-na-rBD" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="16" y="217" width="288" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cp0-rP-Ict">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cp0-rP-Ict">
                                                 <rect key="frame" x="8" y="10" width="272" height="30"/>
                                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Seh-7A-hD9"/>
+                                            <constraint firstItem="cp0-rP-Ict" firstAttribute="top" secondItem="jFy-na-rBD" secondAttribute="top" constant="10" id="XNv-hF-JY1"/>
+                                            <constraint firstItem="cp0-rP-Ict" firstAttribute="centerY" secondItem="jFy-na-rBD" secondAttribute="centerY" id="g8q-0s-nC1"/>
+                                            <constraint firstItem="cp0-rP-Ict" firstAttribute="leading" secondItem="jFy-na-rBD" secondAttribute="leadingMargin" id="nj3-68-KAO"/>
+                                            <constraint firstItem="cp0-rP-Ict" firstAttribute="trailing" secondItem="jFy-na-rBD" secondAttribute="trailingMargin" id="sPO-Dz-l0e"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNC-fo-VP8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNC-fo-VP8">
                                         <rect key="frame" x="16" y="275" width="124" height="21"/>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-oM-LvS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-oM-LvS" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="16" y="304" width="288" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-nx-2Bj">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAY-nx-2Bj">
                                                 <rect key="frame" x="8" y="10" width="272" height="30"/>
                                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="IAY-nx-2Bj" firstAttribute="leading" secondItem="bBn-oM-LvS" secondAttribute="leadingMargin" id="0VR-5Q-6Ru"/>
+                                            <constraint firstItem="IAY-nx-2Bj" firstAttribute="trailing" secondItem="bBn-oM-LvS" secondAttribute="trailingMargin" id="7F5-1Q-zle"/>
+                                            <constraint firstAttribute="height" constant="50" id="Rtv-L2-68W"/>
+                                            <constraint firstItem="IAY-nx-2Bj" firstAttribute="top" secondItem="bBn-oM-LvS" secondAttribute="top" constant="10" id="fqD-Jr-ti2"/>
+                                            <constraint firstItem="IAY-nx-2Bj" firstAttribute="centerY" secondItem="bBn-oM-LvS" secondAttribute="centerY" id="ywg-qX-P83"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EPI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COY-TS-PQW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COY-TS-PQW">
                                         <rect key="frame" x="16" y="362" width="124" height="21"/>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-xu-b5T" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-xu-b5T" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="16" y="391" width="288" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-RY-OzG">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-RY-OzG">
                                                 <rect key="frame" x="8" y="10" width="272" height="30"/>
                                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6JU-RY-OzG" firstAttribute="top" secondItem="F2x-xu-b5T" secondAttribute="top" constant="10" id="UbN-A3-dHW"/>
+                                            <constraint firstItem="6JU-RY-OzG" firstAttribute="leading" secondItem="F2x-xu-b5T" secondAttribute="leadingMargin" id="ead-0e-4ew"/>
+                                            <constraint firstAttribute="height" constant="50" id="vAc-O6-5mL"/>
+                                            <constraint firstItem="6JU-RY-OzG" firstAttribute="trailing" secondItem="F2x-xu-b5T" secondAttribute="trailingMargin" id="x32-ef-b6U"/>
+                                            <constraint firstItem="6JU-RY-OzG" firstAttribute="centerY" secondItem="F2x-xu-b5T" secondAttribute="centerY" id="zje-o0-VXo"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-EF-nv6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-EF-nv6">
                                         <rect key="frame" x="16" y="446" width="124" height="21"/>
                                         <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-3y-NUd" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-3y-NUd" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                         <rect key="frame" x="16" y="475" width="288" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-6M-Ejs">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-6M-Ejs">
                                                 <rect key="frame" x="8" y="10" width="272" height="30"/>
                                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1BA-fH-LWs"/>
+                                            <constraint firstItem="rb0-6M-Ejs" firstAttribute="trailing" secondItem="SsG-3y-NUd" secondAttribute="trailingMargin" id="D1d-HZ-M6i"/>
+                                            <constraint firstItem="rb0-6M-Ejs" firstAttribute="leading" secondItem="SsG-3y-NUd" secondAttribute="leadingMargin" id="F7s-ym-nov"/>
+                                            <constraint firstItem="rb0-6M-Ejs" firstAttribute="top" secondItem="SsG-3y-NUd" secondAttribute="top" constant="10" id="aW4-Tz-S5t"/>
+                                            <constraint firstItem="rb0-6M-Ejs" firstAttribute="centerY" secondItem="SsG-3y-NUd" secondAttribute="centerY" id="sd3-Z3-Boh"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laS-ur-2tG" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="632" width="288" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alg-dw-V9E">
-                                                <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="SsG-3y-NUd" firstAttribute="top" secondItem="jzJ-EF-nv6" secondAttribute="bottom" constant="8" symbolic="YES" id="0nE-8U-W83"/>
+                                    <constraint firstItem="3Ey-kG-HS7" firstAttribute="centerX" secondItem="ypE-dV-VVS" secondAttribute="centerX" id="0y5-W0-bwc"/>
+                                    <constraint firstItem="vWP-h0-o67" firstAttribute="top" secondItem="zHg-Y8-ipg" secondAttribute="bottom" constant="8" symbolic="YES" id="1aT-so-7Qa"/>
+                                    <constraint firstItem="fUU-6v-SXB" firstAttribute="leading" secondItem="ypE-dV-VVS" secondAttribute="leading" id="2fo-z8-r2G"/>
+                                    <constraint firstItem="F2x-xu-b5T" firstAttribute="trailing" secondItem="bBn-oM-LvS" secondAttribute="trailing" id="2i0-35-ADL"/>
+                                    <constraint firstItem="tNC-fo-VP8" firstAttribute="top" secondItem="jFy-na-rBD" secondAttribute="bottom" constant="8" symbolic="YES" id="3fE-uB-qAF"/>
+                                    <constraint firstItem="fUU-6v-SXB" firstAttribute="top" secondItem="3Ey-kG-HS7" secondAttribute="bottom" constant="16" id="4BM-k5-UgM"/>
+                                    <constraint firstItem="zHg-Y8-ipg" firstAttribute="leading" secondItem="vWP-h0-o67" secondAttribute="leading" id="5eT-nr-Lk0"/>
+                                    <constraint firstItem="SsG-3y-NUd" firstAttribute="trailing" secondItem="F2x-xu-b5T" secondAttribute="trailing" id="7Ia-6E-466"/>
+                                    <constraint firstItem="wTC-ho-XxW" firstAttribute="trailing" secondItem="jFy-na-rBD" secondAttribute="trailing" id="7yH-45-hnA"/>
+                                    <constraint firstItem="vWP-h0-o67" firstAttribute="trailing" secondItem="tNC-fo-VP8" secondAttribute="trailing" id="8Xd-M2-BYi"/>
+                                    <constraint firstItem="3Ey-kG-HS7" firstAttribute="leading" secondItem="PCD-Vy-5bS" secondAttribute="leading" id="APt-0F-kD2"/>
+                                    <constraint firstItem="jFy-na-rBD" firstAttribute="top" secondItem="wTC-ho-XxW" secondAttribute="bottom" constant="32" id="BYx-Kc-ZHJ"/>
+                                    <constraint firstItem="wTC-ho-XxW" firstAttribute="top" secondItem="zHg-Y8-ipg" secondAttribute="top" id="C1L-fb-bp1"/>
+                                    <constraint firstItem="3Ey-kG-HS7" firstAttribute="top" secondItem="PCD-Vy-5bS" secondAttribute="top" id="EM6-Xs-Alp"/>
+                                    <constraint firstItem="wTC-ho-XxW" firstAttribute="trailing" secondItem="ypE-dV-VVS" secondAttribute="trailing" id="Ffp-6O-FYX"/>
+                                    <constraint firstItem="ypE-dV-VVS" firstAttribute="top" secondItem="fUU-6v-SXB" secondAttribute="bottom" constant="8" symbolic="YES" id="H9q-e3-cNj"/>
+                                    <constraint firstItem="wTC-ho-XxW" firstAttribute="leading" secondItem="zHg-Y8-ipg" secondAttribute="trailing" constant="32" id="IGl-W4-d1f"/>
+                                    <constraint firstItem="ypE-dV-VVS" firstAttribute="centerX" secondItem="PCD-Vy-5bS" secondAttribute="centerX" id="NSc-QU-ptW"/>
+                                    <constraint firstAttribute="bottom" secondItem="SsG-3y-NUd" secondAttribute="bottom" constant="20" id="NsQ-Vl-ahl"/>
+                                    <constraint firstItem="zHg-Y8-ipg" firstAttribute="leading" secondItem="ypE-dV-VVS" secondAttribute="leading" id="Pwk-Dt-G4h"/>
+                                    <constraint firstItem="tNC-fo-VP8" firstAttribute="trailing" secondItem="COY-TS-PQW" secondAttribute="trailing" id="dvg-1V-ZpJ"/>
+                                    <constraint firstItem="jFy-na-rBD" firstAttribute="top" secondItem="vWP-h0-o67" secondAttribute="bottom" constant="8" symbolic="YES" id="eX1-OS-Dba"/>
+                                    <constraint firstItem="zHg-Y8-ipg" firstAttribute="top" secondItem="ypE-dV-VVS" secondAttribute="bottom" constant="15" id="glI-f1-HV2"/>
+                                    <constraint firstItem="bBn-oM-LvS" firstAttribute="top" secondItem="tNC-fo-VP8" secondAttribute="bottom" constant="8" symbolic="YES" id="i7k-5t-cLi"/>
+                                    <constraint firstItem="COY-TS-PQW" firstAttribute="trailing" secondItem="jzJ-EF-nv6" secondAttribute="trailing" id="ja1-jg-1XX"/>
+                                    <constraint firstItem="jFy-na-rBD" firstAttribute="trailing" secondItem="bBn-oM-LvS" secondAttribute="trailing" id="jfZ-tI-qVf"/>
+                                    <constraint firstItem="jFy-na-rBD" firstAttribute="leading" secondItem="vWP-h0-o67" secondAttribute="leading" id="l1I-Lk-SuX"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Ey-kG-HS7" secondAttribute="trailing" id="lHQ-pE-mhU"/>
+                                    <constraint firstItem="COY-TS-PQW" firstAttribute="leading" secondItem="bBn-oM-LvS" secondAttribute="leading" id="vBj-jd-uzd"/>
+                                    <constraint firstItem="F2x-xu-b5T" firstAttribute="top" secondItem="COY-TS-PQW" secondAttribute="bottom" constant="8" symbolic="YES" id="vWy-Yt-4ol"/>
+                                    <constraint firstItem="jzJ-EF-nv6" firstAttribute="top" secondItem="F2x-xu-b5T" secondAttribute="bottom" constant="5" id="vx9-Fh-N26"/>
+                                    <constraint firstItem="jzJ-EF-nv6" firstAttribute="leading" secondItem="SsG-3y-NUd" secondAttribute="leading" id="w6H-LA-CyJ"/>
+                                    <constraint firstItem="COY-TS-PQW" firstAttribute="leading" secondItem="F2x-xu-b5T" secondAttribute="leading" id="wK9-WD-aA9"/>
+                                    <constraint firstItem="COY-TS-PQW" firstAttribute="top" secondItem="bBn-oM-LvS" secondAttribute="bottom" constant="8" symbolic="YES" id="wNR-Hk-L3h"/>
+                                    <constraint firstItem="tNC-fo-VP8" firstAttribute="leading" secondItem="jFy-na-rBD" secondAttribute="leading" id="wvG-fT-y2Z"/>
+                                    <constraint firstItem="fUU-6v-SXB" firstAttribute="trailing" secondItem="vWP-h0-o67" secondAttribute="trailing" id="xMA-Cb-9ig"/>
+                                    <constraint firstItem="fUU-6v-SXB" firstAttribute="leading" secondItem="PCD-Vy-5bS" secondAttribute="leading" constant="16" id="xfT-7T-yhK"/>
+                                    <constraint firstItem="jzJ-EF-nv6" firstAttribute="leading" secondItem="F2x-xu-b5T" secondAttribute="leading" id="ydi-Oj-Xhn"/>
+                                    <constraint firstItem="bBn-oM-LvS" firstAttribute="leading" secondItem="tNC-fo-VP8" secondAttribute="leading" id="yiR-gA-wue"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="keyPath">
-                                        <size key="value" width="320" height="900"/>
+                                        <size key="value" width="320" height="545"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PCD-Vy-5bS" firstAttribute="bottom" secondItem="uL2-vJ-2zO" secondAttribute="top" id="Jjh-rT-NxX"/>
+                            <constraint firstItem="PCD-Vy-5bS" firstAttribute="leading" secondItem="gBO-MU-dvf" secondAttribute="leading" id="Xbp-WR-auG"/>
+                            <constraint firstAttribute="trailing" secondItem="PCD-Vy-5bS" secondAttribute="trailing" id="ZU8-Wl-z6H"/>
+                            <constraint firstItem="PCD-Vy-5bS" firstAttribute="top" secondItem="gBO-MU-dvf" secondAttribute="topMargin" constant="63" id="pvG-kk-VGv"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cardio" image="Hearth" id="aD5-AT-CAk"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Cardio" image="Hearth" id="aD5-AT-CAk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="900"/>
+                    <size key="freeformSize" width="320" height="657"/>
                     <connections>
                         <outlet property="dobTF" destination="IAY-nx-2Bj" id="Y9L-RA-Z8K"/>
                         <outlet property="dopTF" destination="cp0-rP-Ict" id="jfv-XY-8Zb"/>
                         <outlet property="epiTF" destination="6JU-RY-OzG" id="ViK-rN-FZX"/>
                         <outlet property="mapTF" destination="bkp-bW-us2" id="8h3-5Q-Z3L"/>
                         <outlet property="norTF" destination="rb0-6M-Ejs" id="mHF-8v-L1I"/>
-                        <outlet property="plateletsTF" destination="alg-dw-V9E" id="ZEc-jX-uaa"/>
                         <outlet property="vasopressorsSwitch" destination="wTC-ho-XxW" id="BDP-KM-ub7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfS-iF-F4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="1553"/>
+            <point key="canvasLocation" x="933" y="1552.5"/>
         </scene>
         <!--Renal-->
         <scene sceneID="D8E-rA-Lbh">
@@ -383,81 +500,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Creatinine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6p-xc-bB6">
-                                <rect key="frame" x="16" y="116" width="124" height="21"/>
+                                <rect key="frame" x="16" y="183" width="124" height="21"/>
                                 <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5aO-KE-WKh" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="145" width="288" height="50"/>
+                                <rect key="frame" x="16" y="212" width="288" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg/dL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-0r-CJI">
                                         <rect key="frame" x="8" y="10" width="272" height="30"/>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urine Output" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-dt-Y5o">
-                                <rect key="frame" x="16" y="214" width="124" height="21"/>
-                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kpZ-Ae-Djy" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="16" y="243" width="288" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mL/day" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-Wn-RIv">
-                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
-                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1v-Jf-oam">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1v-Jf-oam" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Renal System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-uA-EvF">
                                         <rect key="frame" x="63" y="0.0" width="183" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl1-R2-5f7" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="renalSaveButton:" destination="fCY-et-SiI" eventType="touchUpInside" id="8Ml-na-VdD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-dX-KiJ" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="121" y="331" width="93" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8A-fe-bb8">
-                                        <rect key="frame" x="27" y="15" width="39" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="11"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-a9-NCu">
+                                <rect key="frame" x="68" y="134" width="185" height="29"/>
+                                <segments>
+                                    <segment title="Creatine"/>
+                                    <segment title="Urine Output"/>
+                                </segments>
+                                <color key="tintColor" red="0.17847516181319212" green="0.36963417858105474" blue="0.71593710885825734" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="fCY-et-SiI" eventType="valueChanged" id="wHP-jY-A6O"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Renal" image="Renal" id="HM5-uB-Zed"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="Renal" image="Renal" id="HM5-uB-Zed"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="creaUrineLabel" destination="g6p-xc-bB6" id="yhr-Y4-WRd"/>
+                        <outlet property="creaUrineSegment" destination="TNp-a9-NCu" id="ANP-um-qZf"/>
                         <outlet property="creatinineTF" destination="nBG-0r-CJI" id="IbR-uz-hc7"/>
-                        <outlet property="urineTF" destination="iQd-Wn-RIv" id="7cv-tm-s7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lC7-pP-h78" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -494,11 +629,16 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="%" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-4K-iOS">
                                         <rect key="frame" x="8" y="10" width="272" height="30"/>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.28805059344311079" green="0.31978081438840272" blue="0.47728168816431205" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iR-05-olG" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                 <rect key="frame" x="16" y="249" width="288" height="50"/>
@@ -506,11 +646,16 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mmHg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RT-rf-fDr">
                                         <rect key="frame" x="8" y="10" width="272" height="30"/>
                                         <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mechanical Ventilation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhR-g4-ORH">
                                 <rect key="frame" x="16" y="327" width="207" height="26"/>
@@ -523,42 +668,58 @@
                                 <color key="onTintColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-vs-BF6">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-vs-BF6" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Respiratory System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxH-Ef-lAA">
                                         <rect key="frame" x="90" y="0.0" width="151" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUJ-xQ-9nz" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="RespiratorySaveButton:" destination="uuK-1u-vVF" eventType="touchUpInside" id="HLD-Nu-Ind"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25289263619444163" green="0.82290482859239511" blue="0.70270297075369459" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-wC-zr4" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
-                                <rect key="frame" x="117" y="412" width="93" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnr-wu-syZ">
-                                        <rect key="frame" x="27" y="15" width="39" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="11"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470589" green="0.25882352941176473" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Respiratory" image="Lungs" selectedImage="Lungs" id="Yeh-BE-K7m"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Respiratory" image="Lungs" id="Yeh-BE-K7m"/>
                     <navigationItem key="navigationItem" title="BlaBla" id="3mq-jx-VEe"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -572,6 +733,227 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7x1-C1-35p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933" y="100"/>
+        </scene>
+        <!--Liver/Coagulation-->
+        <scene sceneID="mzg-eC-uf5">
+            <objects>
+                <viewController id="CHc-pP-NGk" customClass="ConsultationViewController" customModule="IntenseCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bKp-gk-jQU"/>
+                        <viewControllerLayoutGuide type="bottom" id="XKN-gS-1lC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uw2-LS-HtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platelets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-Zc-dVS">
+                                <rect key="frame" x="16" y="121" width="124" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="M31-ti-jD3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-iz-2az" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="150" width="288" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="x10^3/mm^3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-yu-k0A">
+                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPE-nP-Rc8" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="16" y="332" width="288" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg/dL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-mH-SoA">
+                                        <rect key="frame" x="8" y="10" width="272" height="30"/>
+                                        <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2880505934" green="0.3197808144" blue="0.4772816882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bilirubin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-DJ-rYd">
+                                <rect key="frame" x="16" y="303" width="124" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOH-0M-bWC" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="237" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuD-MD-sIB">
+                                        <rect key="frame" x="90" y="0.0" width="140" height="44"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9O-XE-bFM" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="mj9-7g-5d3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="liverSaveButton:" destination="CHc-pP-NGk" eventType="touchUpInside" id="T8z-uL-skS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="C9O-XE-bFM" firstAttribute="top" secondItem="GOH-0M-bWC" secondAttribute="top" constant="7" id="6Ju-N7-gOi"/>
+                                    <constraint firstItem="C9O-XE-bFM" firstAttribute="centerY" secondItem="zuD-MD-sIB" secondAttribute="centerY" id="8Lj-Kw-jvW"/>
+                                    <constraint firstItem="zuD-MD-sIB" firstAttribute="centerX" secondItem="GOH-0M-bWC" secondAttribute="centerX" id="UPY-Jp-Ygc"/>
+                                    <constraint firstItem="C9O-XE-bFM" firstAttribute="leading" secondItem="zuD-MD-sIB" secondAttribute="trailing" constant="36" id="WpL-Ex-YbS"/>
+                                    <constraint firstItem="zuD-MD-sIB" firstAttribute="top" secondItem="GOH-0M-bWC" secondAttribute="top" id="hUi-le-VCT"/>
+                                    <constraint firstItem="zuD-MD-sIB" firstAttribute="leading" secondItem="GOH-0M-bWC" secondAttribute="leading" constant="90" id="hrf-OL-mSp"/>
+                                    <constraint firstItem="C9O-XE-bFM" firstAttribute="trailing" secondItem="GOH-0M-bWC" secondAttribute="trailingMargin" id="vA2-pA-FjA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epG-Sw-ewC" customClass="CustomTextBackground" customModule="IntenseCare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coagulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSZ-Kt-48H">
+                                        <rect key="frame" x="63" y="0.0" width="183" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZA-SO-5nh" customClass="CustomButton" customModule="IntenseCare" customModuleProvider="target">
+                                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="IEj-IY-jNa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.90196078430000004" green="0.29803921570000003" blue="0.39607843139999999" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.59999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="coagulationSaveButton:" destination="CHc-pP-NGk" eventType="touchUpInside" id="tKW-Wr-p4M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25289263620000002" green="0.82290482860000003" blue="0.70270297079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0ZA-SO-5nh" firstAttribute="trailing" secondItem="epG-Sw-ewC" secondAttribute="trailingMargin" id="7SF-Jh-Pae"/>
+                                    <constraint firstItem="NSZ-Kt-48H" firstAttribute="leading" secondItem="epG-Sw-ewC" secondAttribute="leading" constant="63" id="DUl-72-WXR"/>
+                                    <constraint firstItem="0ZA-SO-5nh" firstAttribute="leading" secondItem="NSZ-Kt-48H" secondAttribute="trailing" constant="20" id="PGT-gU-c3f"/>
+                                    <constraint firstAttribute="bottom" secondItem="NSZ-Kt-48H" secondAttribute="bottom" id="cOi-ow-oa8"/>
+                                    <constraint firstItem="0ZA-SO-5nh" firstAttribute="centerY" secondItem="NSZ-Kt-48H" secondAttribute="centerY" id="dFF-AQ-9E6"/>
+                                    <constraint firstItem="NSZ-Kt-48H" firstAttribute="top" secondItem="epG-Sw-ewC" secondAttribute="top" id="gyU-te-Z1q"/>
+                                    <constraint firstAttribute="height" constant="44" id="jOm-Pe-Ufh"/>
+                                    <constraint firstItem="0ZA-SO-5nh" firstAttribute="top" secondItem="epG-Sw-ewC" secondAttribute="top" constant="7" id="pdI-X9-IzQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.2274509804" green="0.81960784310000001" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GOH-0M-bWC" firstAttribute="leading" secondItem="epG-Sw-ewC" secondAttribute="leading" id="329-EN-HjE"/>
+                            <constraint firstItem="Xrr-DJ-rYd" firstAttribute="top" secondItem="GOH-0M-bWC" secondAttribute="bottom" constant="22" id="96V-Wn-qgo"/>
+                            <constraint firstItem="9s1-iz-2az" firstAttribute="top" secondItem="dnx-Zc-dVS" secondAttribute="bottom" constant="8" symbolic="YES" id="ARi-s3-dWU"/>
+                            <constraint firstItem="SPE-nP-Rc8" firstAttribute="top" secondItem="Uw2-LS-HtZ" secondAttribute="top" constant="332" id="AYX-LH-WAK"/>
+                            <constraint firstItem="XKN-gS-1lC" firstAttribute="top" secondItem="SPE-nP-Rc8" secondAttribute="bottom" constant="137" id="B2e-ab-TMo"/>
+                            <constraint firstItem="GOH-0M-bWC" firstAttribute="top" secondItem="9s1-iz-2az" secondAttribute="bottom" constant="37" id="FGF-Fy-MI9"/>
+                            <constraint firstItem="Xrr-DJ-rYd" firstAttribute="leading" secondItem="SPE-nP-Rc8" secondAttribute="leading" id="FiG-Ej-dyf"/>
+                            <constraint firstItem="dnx-Zc-dVS" firstAttribute="trailing" secondItem="Xrr-DJ-rYd" secondAttribute="trailing" id="H2u-kP-80a"/>
+                            <constraint firstItem="GOH-0M-bWC" firstAttribute="top" secondItem="Uw2-LS-HtZ" secondAttribute="top" constant="237" id="JaR-kl-FKs"/>
+                            <constraint firstItem="dnx-Zc-dVS" firstAttribute="top" secondItem="epG-Sw-ewC" secondAttribute="bottom" constant="13" id="MLN-Pl-Evg"/>
+                            <constraint firstItem="9s1-iz-2az" firstAttribute="leading" secondItem="dnx-Zc-dVS" secondAttribute="leading" id="MWs-dM-oev"/>
+                            <constraint firstItem="epG-Sw-ewC" firstAttribute="top" secondItem="bKp-gk-jQU" secondAttribute="bottom" constant="44" id="THY-ea-hCk"/>
+                            <constraint firstItem="epG-Sw-ewC" firstAttribute="leading" secondItem="Uw2-LS-HtZ" secondAttribute="leadingMargin" constant="-16" id="WOq-Ck-ZdW"/>
+                            <constraint firstItem="GOH-0M-bWC" firstAttribute="trailing" secondItem="epG-Sw-ewC" secondAttribute="trailing" id="b6O-0r-b6p"/>
+                            <constraint firstItem="SPE-nP-Rc8" firstAttribute="top" secondItem="Xrr-DJ-rYd" secondAttribute="bottom" constant="8" symbolic="YES" id="bPi-ip-H0L"/>
+                            <constraint firstItem="9s1-iz-2az" firstAttribute="leading" secondItem="Xrr-DJ-rYd" secondAttribute="leading" id="jRV-Kf-1oF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="epG-Sw-ewC" secondAttribute="trailing" constant="-16" id="n0h-OK-oLD"/>
+                            <constraint firstItem="GOH-0M-bWC" firstAttribute="centerX" secondItem="9s1-iz-2az" secondAttribute="centerX" id="rid-tm-lyt"/>
+                            <constraint firstItem="SPE-nP-Rc8" firstAttribute="leading" secondItem="Uw2-LS-HtZ" secondAttribute="leadingMargin" id="zUN-rM-9eQ"/>
+                            <constraint firstItem="9s1-iz-2az" firstAttribute="trailing" secondItem="SPE-nP-Rc8" secondAttribute="trailing" id="zbl-gX-HxB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Liver/Coagulation" image="Liver" id="v8w-Mk-tcH"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bilirubinTF" destination="OiX-mH-SoA" id="8sA-iC-hXc"/>
+                        <outlet property="plateletsTF" destination="7BY-yu-k0A" id="Mvv-fB-m9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNQ-xZ-kbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488" y="675"/>
         </scene>
         <!--Consultation Tabs Controller-->
         <scene sceneID="ZX5-J7-lN0">
@@ -591,6 +973,7 @@
                         <segue destination="WiJ-bl-2jj" kind="relationship" relationship="viewControllers" id="3hT-fW-SZv"/>
                         <segue destination="ANk-eK-KFu" kind="relationship" relationship="viewControllers" id="mGF-8x-WOW"/>
                         <segue destination="fCY-et-SiI" kind="relationship" relationship="viewControllers" id="NCy-zu-hlQ"/>
+                        <segue destination="CHc-pP-NGk" kind="relationship" relationship="viewControllers" id="LoZ-cg-tUw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30t-K9-ush" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -602,6 +985,7 @@
     <resources>
         <image name="Brain" width="24" height="24"/>
         <image name="Hearth" width="24" height="24"/>
+        <image name="Liver" width="25" height="25"/>
         <image name="Lungs" width="24" height="24"/>
         <image name="Renal" width="24" height="24"/>
     </resources>

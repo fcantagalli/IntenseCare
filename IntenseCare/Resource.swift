@@ -13,6 +13,10 @@ import UIKit
         static var barColor = UIColorFromHex("3DC8AB", 1.0)
     }
     
+    struct SOFAColors {
+        // include colors for sofa here
+    }
+    
         class WebServiceResource {
             
             let GET_PATIENT_BY_HOSPITAL_ID = "http://bianca.letti.com.br/IntenseCare/patient.php?method=getPatientByHospitalId"
