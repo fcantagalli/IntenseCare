@@ -29,6 +29,8 @@ import UIKit
             let ALTER_PASSWORD = "http://bianca.letti.com.br/IntenseCare/user.php?method=alterPassword"
             let UPDATE_USER = "http://bianca.letti.com.br/IntenseCare/user.php?method=updateUser"
             let GET_USER_INFO = "http://bianca.letti.com.br/IntenseCare/user.php?method=getUser"
+            let SEARCH_ALL = "http://bianca.letti.com.br/IntenseCare/searchLastValues.php?method=searchLastValues"
+            
             
             let serviceGroup:dispatch_group_t = dispatch_group_create()
             

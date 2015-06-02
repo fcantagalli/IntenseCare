@@ -10,6 +10,28 @@ import Foundation
 
 class ConsultationViewController: UIViewController, UITextFieldDelegate {
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    //respiratory
+    var p_FIO2TF:Double!
+    var p_pa02:Double!
+    var p_mechVentSwitch:Int!
+    
+    var p_glasgowTF:Double!
+    var p_bilirubinTF:Double!
+    
+    var p_mapTF:Double!
+    var p_dopTF:Double!
+    var p_dobTF:Double!
+    var p_epiTF:Double!
+    var p_norTF:Double!
+    var p_plateletsTF:Double!
+    var p_creatinineTF:Double!
+    var p_creaUrineSegmentTF:Int!
+    var p_creaUrineSegment: UISegmentedControl = UISegmentedControl()
+    
     //OUTLETS AND ACTIONS
     @IBOutlet weak var navItem: UINavigationItem!
     
@@ -19,20 +41,68 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mechVentSwitch: UISwitch!
     
     @IBAction func RespiratorySaveButton(sender: AnyObject) {
-        // save here
+        if ((FIO2TF.text == "" && pa02.text != "") || (FIO2TF.text != "" && pa02.text == "") ){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for FIO2 and PAO2." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else{
+            println ("entrei no else")
+            if (p_glasgowTF != -2 && p_mapTF != -3 && p_creatinineTF != -4 && p_plateletsTF != -5 && p_bilirubinTF != -6){
+                var doubleFIO2:Double = (FIO2TF.text as NSString).doubleValue
+                
+                var doublepa02:Double = (pa02.text as NSString).doubleValue
+                println ("Double FIO2 \(doubleFIO2)  E PAO2 \(doublepa02)")
+                if (p_creaUrineSegmentTF == 0) {
+                    println ("entro aqui sim \(p_creaUrineSegmentTF)")
+                                        p_creaUrineSegment.selectedSegmentIndex = 0
+                }
+                else{
+                    p_creaUrineSegment.selectedSegmentIndex = 1
+                }
+                //calcSofa(doubleFIO2:Double, doublepa02:Double, mechVentSwitch:UISwitch, doubleglasgow:Double, doubleBilirubin:Double, doubleMap:Double, doubleDop:Double, doubleDob:Double, doubleEpi:Double, doubleNor:Double, vasoopressorSwitch:String, doublePlatelets:Double, doubleCreatinine:Double)
+                calcSofa( doubleFIO2, doublepa02: doublepa02, mechVentSwitch: mechVentSwitch, doubleglasgow: self.p_glasgowTF, doubleBilirubin: self.p_bilirubinTF, doubleMap: self.p_mapTF, doubleDop: self.p_dopTF, doubleDob: self.p_dobTF, doubleEpi: self.p_epiTF, doubleNor: self.p_norTF,  doublePlatelets: self.p_plateletsTF , doubleCreatinine: self.p_creatinineTF , creaUrineSegmentTF: p_creaUrineSegment )
+
+            }
+            else{
+                let alert = UIAlertController(title: "Information", message: "It is not possible to calculate Sofa, because there is not enought information yet for this patient." , preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                //return ;
+                //save in db
+            }
+        }
+
     }
-    
+
         //Nervous System
     @IBOutlet weak var glasgowTF: UITextField!
     @IBAction func NervousSaveButton(sender: AnyObject) {
-        // save here
+        if (glasgowTF.text == ""){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for glasgow." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else{
+            
+        }
         
     }
     
         //Liver
     @IBOutlet weak var bilirubinTF: UITextField!
     @IBAction func liverSaveButton(sender: AnyObject) {
-        // save here
+        if (bilirubinTF.text == ""){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for bilirubin." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else{
+            
+        }
     }
     
         // cardio vascular system
@@ -44,13 +114,36 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var norTF: UITextField!
     
     @IBAction func CardioSaveButton(sender: AnyObject) {
-        //save here
+        if (mapTF.text == ""){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for Map." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else if ( vasopressorsSwitch.on && dopTF.text == "" && dobTF.text == "" && epiTF.text == "" && norTF.text == "" ){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, Vaso Opressors is selected, insert information for Dopamine, Dobutamine, Epinephrine or Noropinephrine." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else {
+
+        }
+
     }
     
         // Coagulation
     @IBOutlet weak var plateletsTF: UITextField!
     @IBAction func coagulationSaveButton(sender: AnyObject) {
-        //save here
+        if (plateletsTF.text == ""){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for platelets." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else{
+            
+        }
     }
     
         // Renal System
@@ -76,41 +169,121 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func renalSaveButton(sender: UIButton) {
-        // save here
+        if (creatinineTF.text == ""){
+            let alert = UIAlertController(title: "Missing Information", message: "Please, insert information for Renal System." , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
+        }
+        else{
+
+        }
         
         
     }
     
+
+
+    func getParameters(){
+        
+        var webService = WebServiceResource.webService
+        var id_patient=1
+        var postParam = "id_patient=\(id_patient)"
+        //respiratory
+        webService.getWebContent(webService.SEARCH_ALL, postVariables: postParam)
+        dispatch_group_notify(webService.serviceGroup, dispatch_get_main_queue(), { () -> Void in
+            var result = webService.result!
+                if result["error"] != nil {
+                    //significa que houve um erro
+                }//end of id
+                else{
+                    //self.p_pa02                 = result[0]["pao2"].string as NSString).doubleValue
+                    self.p_pa02                 = result[0]["pao2"].doubleValue
+                    self.p_FIO2TF               = result[0]["fio2"].doubleValue
+                    self.p_mechVentSwitch       = result[0]["mechVent"].intValue
+                    self.p_glasgowTF            = result[1]["glasgow"].doubleValue
+                    self.p_mapTF                = result[2]["map"].doubleValue
+                    self.p_dopTF                = result[2]["dop"].doubleValue
+                    self.p_dobTF                = result[2]["dob"].doubleValue
+                    self.p_epiTF                = result[2]["epi"].doubleValue
+                    self.p_norTF                = result[2]["nor"].doubleValue
+                    self.p_creatinineTF         = result[3]["creat_urine"].doubleValue
+                    self.p_creaUrineSegmentTF   = result[3]["type"].intValue
+                    self.p_plateletsTF          = result[4]["platelets"].doubleValue
+                    self.p_bilirubinTF          = result[5]["bilirubin"].doubleValue
+                    
+                    
+                    println("inicio")
+                    println(self.p_pa02)
+                    println(self.p_FIO2TF)
+                    println(self.p_mechVentSwitch)
+                    println(self.p_glasgowTF)
+                    println(self.p_mapTF)
+                    println(self.p_dopTF)
+                    println(self.p_dobTF)
+                    println(self.p_epiTF)
+                    println(self.p_norTF)
+                    println(self.p_creatinineTF)
+                    println(self.p_creaUrineSegmentTF)
+                    println(self.p_plateletsTF)
+                    println(self.p_bilirubinTF)
+                    println("fim")
+                    
+                }//end of else
+                
+            })//end of notify
+    }//end of getParameters
+     var sofa:Int=0
     func calcResultSofa(){
         
         if (sofa >= 0 && sofa <= 6){
             
             //mortality = 10%
             //paciente recebe a cor: #D1F2A5
+            let alert = UIAlertController(title: "Sofa Result", message: "Sofa = \(sofa)"  , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
         }
             
         else if (sofa >= 7 && sofa <= 9){
             
             //mortality = 15% - 20%
             //paciente recebe a cor: #EFFAB4
+            let alert = UIAlertController(title: "Sofa Result", message: "Sofa = \(sofa)"  , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
         }
             
         else if (sofa >= 10 && sofa <= 12){
             
             //mortality = 40 - 50%
             //paciente recebe a cor: #FFC48C
+            let alert = UIAlertController(title: "Sofa Result", message: "Sofa = \(sofa)"  , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
         }
             
         else if (sofa >= 13 && sofa <= 14){
             
             //mortality = 50% - 60%
             //paciente recebe a cor: #FF9F80
+            let alert = UIAlertController(title: "Sofa Result", message: "Sofa = \(sofa)"  , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
         }
             
         else if (sofa >= 15){
             
             //mortality > 60%
             //paciente recebe a cor: #F56991
+            let alert = UIAlertController(title: "Sofa Result", message: "Sofa = \(sofa)"  , preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return ;
         }
             
         else{
@@ -118,96 +291,42 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
         }
     }//fim da funcao calc result sofa
     
-    var sofa:Int=0
+ 
     
-    func calcSofa(FIO2TF:String, pa02:String, mechVentSwitch:UISwitch, glasgowTF:String, bilirubinTF:String, mapTF:String, dopTF:String, dobTF:String, epiTF:String, norTF:String, vasoopressorSwitch:String, plateletsTF:String, creatitineTF:String, urineTF:String){
+    
+    func calcSofa(doubleFIO2:Double, doublepa02:Double, mechVentSwitch:UISwitch, doubleglasgow:Double, doubleBilirubin:Double, doubleMap:Double, doubleDop:Double, doubleDob:Double, doubleEpi:Double, doubleNor:Double, doublePlatelets:Double, doubleCreatinine:Double , creaUrineSegmentTF:UISegmentedControl){
         
-        if (FIO2TF != "" && pa02 != "" && glasgowTF != "" && bilirubinTF != "" && (mapTF != "" || dopTF != "" || dobTF != "" || epiTF != "" || norTF != "") && vasoopressorSwitch != "" && plateletsTF != "" && creatitineTF != "" && urineTF != ""){
-
+        
             //calculating FIO2
             
             //fio2 comes in %
             
-            var floatFIO2:Float = (FIO2TF as NSString).floatValue
+            //var doubleFIO2:Double = (FIO2TF as NSString).doubleValue
             
-            /*
+            //var doublepa02:Double = (pa02 as NSString).doubleValue
             
-            A PaO2 (pressão parcial arterial de O2) é dada em mmHG (medida de pressão) ==> colhe o sangue arterial - diferente do usual para outros exames que usa o sangue da veia -  e manda para o laboratório
+            var doubleRespiratory = doublepa02 / (doubleFIO2/100)
             
-            A FiO2 (fração inspirada de O2) é dada em % (media de proporção) ==> diz a respeito de quanto se está ofertando de O2 ao paciente, é controlada de acordo com o equipamento usado para suplementar oxigênio ao paciente:
-            
-            21% se o paciente não estiver recebendo suplementação de O2, ou seja respirando ar ambiente;
-            
-            24 a 28% se estiver recebendo O2 por cateter nasal (o que é até no máximo de 4l/min pelo cateter de oxigênio, se não estiver funcionando troca-se por uma máscara);
-            
-            e até 50% se for necessário usar uma máscara (nos melhores lugares, a de Venturi);
-            
-            mais do que isso o paciente precisa ser intubado e rebe o oxigênio pelo aparelho de ventilação mecânica, ajustado de acordo com a necessidade pelo fisioterapêuta ou médico. Na ventilação mecânica, o parelho pode oferecer qualquer quantidade.
-            
-            O oxigênio em altas proporções é tóxico para as células pulmonares (pneumócitos), entào, a tentativa é sempre deixar o mais perto possível da composição normal do ar ambiente, desde que mantido a quantidade de oxigênio necessidade dos orgãos vitais (especialmente cérebro)
-            
-            ==> de 21 (o valor esperado de O2 no ar ambiente) a 100% (valor máximo dado pelo aparelho de ventilação mecânica.
-            
-            if(floatFIO2 > 20 && floatFIO2 < 24){
-            
-            sofa = sofa+1
-            
-            }
-            
-            else if (floatFIO2 >= 24 && floatFIO2 < 29){
-            
-            sofa = sofa+2
-            
-            }
-            
-            else if (floatFIO2 >= 29 && floatFIO2 < 51){
-            
-            sofa = sofa+3
-            
-            }
-            
-            else if (floatFIO2 >= 51 && mechVentSwitch.on){
-            
-            sofa = sofa+4
-            
-            }
-            
-            else{
-            
-            //erro
-            
-            }*/
-            
-            //calculating pa02
-            
-            //pa02 comes in mmHg
-            
-            //Exemplo : PaO2 = 90 mmHg com FiO2 = 60% ==> PaO2/FiO2 = 150 (SOFA 3)
-            
-            var floatpa02:Float = (pa02 as NSString).floatValue
-            
-            var floatRespiratory = floatpa02 / floatFIO2
-            
-            if (floatRespiratory > 400){
+            if (doubleRespiratory > 400){
                 sofa = sofa+0
             }
                 
-            else if(floatpa02 > 300 && floatpa02 <= 400){
+            else if(doublepa02 > 300 && doublepa02 <= 400){
                 sofa = sofa+1
             }
                 
-            else if (floatpa02 > 200 && floatpa02 <= 300){
+            else if (doublepa02 > 200 && doublepa02 <= 300){
                 sofa = sofa+2
             }
                 
-            else if (floatpa02 > 100 && floatpa02 <= 200
+            else if (doublepa02 > 100 && doublepa02 <= 200
                 
                 && mechVentSwitch.on ){
                     sofa = sofa+3
                     
             }
                 
-            else if (floatpa02 >= 1 && floatpa02 <= 100 && mechVentSwitch.on){
+            else if (doublepa02 >= 1 && doublepa02 <= 100 && mechVentSwitch.on){
                 
                 sofa = sofa+4
                 
@@ -237,33 +356,33 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
             
             */
             
-            var floatglasgow:Float = (glasgowTF as NSString).floatValue
+//            var doubleglasgow:Double = (glasgowTF as NSString).doubleValue
             
-            if(floatglasgow == 13 || floatglasgow == 14){
+            if(doubleglasgow == 13 || doubleglasgow == 14){
                 
                 sofa = sofa+1
                 
             }
                 
-            else if (floatglasgow >= 10 && floatglasgow <= 12){
+            else if (doubleglasgow >= 10 && doubleglasgow <= 12){
                 
                 sofa = sofa+2
                 
             }
                 
-            else if (floatglasgow >= 6 && floatglasgow <= 9 ){
+            else if (doubleglasgow >= 6 && doubleglasgow <= 9 ){
                 
                 sofa = sofa+3
                 
             }
                 
-            else if (floatglasgow < 6 && floatglasgow >= 0){
+            else if (doubleglasgow < 6 && doubleglasgow >= 0){
                 
                 sofa = sofa+4
                 
             }
                 
-            else if (floatglasgow == 15){
+            else if (doubleglasgow == 15){
                 
                 sofa = sofa+0
                 
@@ -279,42 +398,42 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
             
             /*
             
-            bilirubin tem duas unidades mesmo. A em mg/dl pode ser float
+            bilirubin tem duas unidades mesmo. A em mg/dl pode ser double
             
-            a em mol eh inteiro. Acho melhor tratarmos como float tudo.
+            a em mol eh inteiro. Acho melhor tratarmos como double tudo.
             
             */
             
-            var floatBilirubin:Float = (bilirubinTF as NSString).floatValue
+            //var doubleBilirubin:Double = (bilirubinTF as NSString).doubleValue
             
-            if (floatBilirubin < 1.2 || floatBilirubin < 20 ){
+            if (doubleBilirubin < 1.2 || doubleBilirubin < 20 ){
                 
                 sofa = sofa+0
                 
             }
             
-            if( (floatBilirubin >= 1.2 && floatBilirubin <= 1.9)
+            if( (doubleBilirubin >= 1.2 && doubleBilirubin <= 1.9)
                 
-                || (floatBilirubin >= 20 && floatBilirubin <= 32) ){
+                || (doubleBilirubin >= 20 && doubleBilirubin <= 32) ){
                     
                     sofa = sofa+1
             }
                 
-            else if( (floatBilirubin > 1.9 && floatBilirubin <= 5.9)
+            else if( (doubleBilirubin > 1.9 && doubleBilirubin <= 5.9)
                 
-                || (floatBilirubin > 32 && floatBilirubin <= 101) ){
+                || (doubleBilirubin > 32 && doubleBilirubin <= 101) ){
                     
                     sofa = sofa+2
             }
                 
-            else if( (floatBilirubin > 5.9 && floatBilirubin <= 11.9)
+            else if( (doubleBilirubin > 5.9 && doubleBilirubin <= 11.9)
                 
-                || (floatBilirubin > 101 && floatBilirubin <= 204) ){
+                || (doubleBilirubin > 101 && doubleBilirubin <= 204) ){
                     
                     sofa = sofa+3
             }
                 
-            else if( floatBilirubin > 11.9 || floatBilirubin > 204 ){
+            else if( doubleBilirubin > 11.9 || doubleBilirubin > 204 ){
                 
                 sofa = sofa+4
             }
@@ -339,33 +458,36 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
             
             */
             
-            var floatMap:Float = (mapTF as NSString).floatValue
+            /*var doubleMap:Double = (mapTF as NSString).doubleValue
             
-            var floatDop:Float = (dopTF as NSString).floatValue
+            var doubleDop:Double = (dopTF as NSString).doubleValue
             
-            var floatEpi:Float = (epiTF as NSString).floatValue
+            var doubleEpi:Double = (epiTF as NSString).doubleValue
             
-            var floatNor:Float = (norTF as NSString).floatValue
+            var doubleNor:Double = (norTF as NSString).doubleValue*/
             
-            if (floatMap < 70){
+            if (doubleMap > 70){
+                sofa = sofa + 0
+            }
+            else if (doubleMap < 70){
                 
                 sofa = sofa+1
                 
             }
                 
-            else if (floatDop <= 5 || dobTF != ""){
+            else if (doubleDop <= 5 || doubleDob > 0){
                 
                 sofa = sofa+2
                 
             }
                 
-            else if ((floatDop > 5 && floatDop <= 15) || floatEpi <= 0.1 || floatNor <= 0.1){
+            else if ((doubleDop > 5 && doubleDop <= 15) || doubleEpi <= 0.1 || doubleNor <= 0.1){
                 
                 sofa = sofa+3
                 
             }
                 
-            else if (floatDop > 15 || floatEpi > 0.1 || floatNor > 0.1){
+            else if (doubleDop > 15 || doubleEpi > 0.1 || doubleNor > 0.1){
                 
                 sofa = sofa+4
                 
@@ -379,33 +501,33 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
 
             //calculating coagulation (platelets)
             
-            var floatPlatelets:Float = (plateletsTF as NSString).floatValue
+            //var doublePlatelets:Double = (plateletsTF as NSString).doubleValue
             
-            if (floatPlatelets > 150){
+            if (doublePlatelets > 150){
                 
                 sofa = sofa+0
                 
             }
                 
-            else if(floatPlatelets > 100 && floatPlatelets <= 150){
+            else if(doublePlatelets > 100 && doublePlatelets <= 150){
                 
                 sofa = sofa+1
                 
             }
                 
-            else if (floatPlatelets > 50 && floatPlatelets <= 100){
+            else if (doublePlatelets > 50 && doublePlatelets <= 100){
                 
                 sofa = sofa+2
                 
             }
                 
-            else if (floatPlatelets > 20 && floatPlatelets <= 50 ){
+            else if (doublePlatelets > 20 && doublePlatelets <= 50 ){
                 
                 sofa = sofa+3
                 
             }
                 
-            else if (floatPlatelets > 0 && floatPlatelets <= 20 ){
+            else if (doublePlatelets > 0 && doublePlatelets <= 20 ){
                 
                 sofa = sofa+4
             }
@@ -419,45 +541,47 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
             //calculating creatinine
             //arrumar para caso creatinina, caso urina output
             
-            var floatCreatinine:Float = (creatitineTF as NSString).floatValue
-            
-            var selected:Int = creaUrineSegment.selectedSegmentIndex
+            //var doubleCreatinine:Double = (creatinineTF as NSString).doubleValue
+        
+        //println ("SELECTED")
+       // creaUrineSegment.selectedSegmentIndex = 0
+            var selected:Int = creaUrineSegmentTF.selectedSegmentIndex
             
             // creatinine
             
             if (selected == 0){
                 
-                if (floatCreatinine < 1.2 || floatCreatinine < 110){
+                if (doubleCreatinine < 1.2 || doubleCreatinine < 110){
                     
                     sofa = sofa+0
                     
                 }
                     
-                else if( (floatCreatinine >= 1.2 && floatCreatinine <= 1.9)
+                else if( (doubleCreatinine >= 1.2 && doubleCreatinine <= 1.9)
                     
-                    || (floatCreatinine >= 110 && floatCreatinine <= 170) ){
+                    || (doubleCreatinine >= 110 && doubleCreatinine <= 170) ){
                         
                         sofa = sofa+1
                         
                 }
                     
-                else if( (floatCreatinine > 1.9 && floatCreatinine <= 3.4)
+                else if( (doubleCreatinine > 1.9 && doubleCreatinine <= 3.4)
                     
-                    || (floatCreatinine > 170 && floatCreatinine <= 299) ){
+                    || (doubleCreatinine > 170 && doubleCreatinine <= 299) ){
                         
                         sofa = sofa+2
                         
                 }
                     
-                else if( (floatCreatinine > 3.4 && floatCreatinine <= 4.9)
+                else if( (doubleCreatinine > 3.4 && doubleCreatinine <= 4.9)
                     
-                    || (floatCreatinine > 299 && floatCreatinine <= 440) ){
+                    || (doubleCreatinine > 299 && doubleCreatinine <= 440) ){
                         
                         sofa = sofa+3
                         
                 }
                     
-                else if( floatCreatinine > 4.9 || floatCreatinine > 440 ){
+                else if( doubleCreatinine > 4.9 || doubleCreatinine > 440 ){
                     
                     sofa = sofa+4
                     
@@ -475,13 +599,13 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
                 
                 //urine output
                 
-                if (floatCreatinine < 500 && floatCreatinine >= 200){
+                if (doubleCreatinine < 500 && doubleCreatinine >= 200){
                     
                     sofa = sofa+3
                     
                 }
                     
-                else if (floatCreatinine < 200){
+                else if (doubleCreatinine < 200){
                     
                     sofa = sofa+4
                     
@@ -492,8 +616,8 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
                 }
                 
             }//fim do else de selected = 1
-        }//end of if
-
+    
+        calcResultSofa()
     }//fim da funcao
     
     override func viewDidLoad() {
@@ -504,6 +628,7 @@ class ConsultationViewController: UIViewController, UITextFieldDelegate {
         self.parentViewController?.navigationItem.title = tabController.patientName
         self.parentViewController?.navigationController?.navigationBar.barTintColor = tabController.barColor
         self.parentViewController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        getParameters()
     }
     
     override func didReceiveMemoryWarning() {
